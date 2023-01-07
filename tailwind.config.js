@@ -1,15 +1,24 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
-  content: ["./src/**/*.{js,jsx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    // colors: {
-    //   "color-border": "#BDBDBD",
-    //   "text-p-color": "#333333",
-    //   "color-red": "rgb(220 38 38)",
-    //   "color-white": "#fff",
-    //   "color-btn": "#2F80ED",
-    //   "color-black": "#222",
-    // },
+    colors: {
+      "color-dark-blue": "#06283D",
+      "color-dark-blue-2": "#144272",
+      "color-light-blue": "#1363DF",
+      // "color-border": "#BDBDBD",
+
+      // "text-p-color": "#333333",
+      // "color-red": "rgb(220 38 38)",
+      "color-white": "#fff",
+      // "color-btn": "#2F80ED",
+      // "color-black": "#222",
+    },
     // screens: {
     //   "2xl": { max: "1535px" },
     //   // => @media (max-width: 1535px) { ... }
@@ -22,7 +31,7 @@ module.exports = {
     //   sm: { max: "639px" },
     //   // => @media (max-width: 639px) { ... }
     // },
-    // extend: {},
+    extend: {},
   },
   plugins: [],
 };
