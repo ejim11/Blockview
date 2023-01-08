@@ -15,14 +15,14 @@ export default function Home() {
           content={"Get the best insights on blockchain"}
         />
       </Head>
-      <section className="bg-gradient-to-b  from-color-dark-blue-2 to-color-white h-[85vh] text-color-white flex flex-col items-center justify-center text-center">
+      <section className="bg-gradient-to-b  from-color-dark-blue-2 to-color-white h-[85vh] text-color-white flex flex-col items-center justify-center text-center px-8 sm:px5">
         <h1 className="text-6xl">The Future of Finance: The Blockchain</h1>
         <p className="text-2xl mt-2">
           Get the Best Abstracted Insights on Blockchain Technology and Its
           Impacts on Business, Economy, and Life.
         </p>
-        <div className="text-2xl mt-6">
-          <button className="mr-4 border rounded-lg px-5 py-2 border-color-dark-blue-2 bg-color-dark-blue-2 hover:text-color-dark-blue-2 hover:bg-color-white transition-all duration-200 ease-in">
+        <div className="text-2xl mt-6 sm:flex sm:flex-col sm:items-center ">
+          <button className="mr-4 sm:mr-0 sm:mb-4 border rounded-lg px-5 py-2 border-color-dark-blue-2 bg-color-dark-blue-2 hover:text-color-dark-blue-2 hover:bg-color-white transition-all duration-200 ease-in">
             Get started
           </button>
           <button className=" border rounded-lg px-5 py-2 text-color-dark-blue-2 border-color-dark-blue-2  hover:bg-color-white transition-all duration-200 ease-in">
@@ -31,8 +31,8 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="flex items-center px-12 mt-4">
-          <div className="w-1/2">
+        <div className="flex items-center px-12 sm:px-5 mt-12 md:flex-col">
+          <div className="w-1/2 lg:w-2/3  md:w-full md:text-center">
             <h3 className="text-5xl">
               Comprehend Distributed Decentralized Networks
             </h3>
@@ -49,16 +49,16 @@ export default function Home() {
           <Image
             src={decentralize}
             alt="decentralize"
-            className="w-[37rem] h-[37rem]"
+            className="w-[37rem] h-[37rem] lg:w-[25rem] lg:h-[25rem] ml-auto md:mx-auto"
           />
         </div>
-        <div className="flex items-center px-12 mt-4">
+        <div className="flex items-center px-12 sm:px-5  mt-12 md:flex-col md:text-center">
           <Image
             src={publicKeyImg}
             alt="publicKey"
-            className="w-[35rem] h-[30rem]"
+            className="w-[35rem] h-[30rem] lg:w-[25rem] lg:h-[25rem] md:mx-auto md:order-2 md:my-10"
           />
-          <div className="w-1/2 ml-14">
+          <div className="w-1/2 lg:w-2/3  md:w-full ml-auto md:order-1">
             <h3 className="text-5xl">
               Grasp The Idea Behind Public Key Cryptography
             </h3>
@@ -73,10 +73,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex items-center px-12 mt-4">
-          <div className="w-1/2">
+        <div className="flex items-center px-12 sm:px-5  mt-12 md:flex-col md:text-center">
+          <div className="w-1/2 lg:w-2/3 md:w-full">
             <h3 className="text-5xl">
-              {" "}
               Understand Why It Is Called A Blockchain
             </h3>
             <p className="mt-4 text-xl">
@@ -90,7 +89,7 @@ export default function Home() {
           <Image
             src={blockchainImg}
             alt="blockchain"
-            className="w-[37rem] h-[37rem]"
+            className="w-[37rem] h-[37rem] lg:w-[25rem] lg:h-[25rem] ml-auto md:mx-auto"
           />
         </div>
       </section>
