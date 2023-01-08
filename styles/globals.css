@@ -12,6 +12,13 @@
 
 html {
   box-sizing: border-box;
+  font-size: 100%;
+}
+
+@media only screen and (max-width: 639px) {
+  html {
+    font-size: 87.5%;
+  }
 }
 
 img {
