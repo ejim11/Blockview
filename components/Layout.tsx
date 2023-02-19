@@ -1,10 +1,11 @@
 import Next from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { SiHiveBlockchain } from "react-icons/si";
+import { FaUncharted } from "react-icons/fa";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
+import LibraryNavBar from "./LibraryNavBar";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [displayNav, setDisplayNav] = useState(false);
@@ -17,14 +18,16 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   const routePath: string = useRouter().pathname;
 
+  console.log(routePath);
+
   const toggleNavDisplay = () => {
     setDisplayNav((prevState) => !prevState);
   };
 
   return (
     <div className="w-[70%] mx-auto 2xl:w-full sm:relative">
-      <header className="flex items-center h-14 px-5 ">
-        <SiHiveBlockchain className="text-color-dark-blue mr-2 w-6 h-6" />
+      <header className="flex items-center h-14 px-5 shadow-sm">
+        <FaUncharted className="text-color-dark-blue mr-2 w-6 h-6" />
         <a className="text-color-dark-blue text-2xl font-bold tracking-wide">
           BLOCKVIEW
         </a>
@@ -62,7 +65,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           />
         </nav>
       </header>
-      <main>{children}</main>
+      <main>
+        {routePath.includes("/library") && <LibraryNavBar />}
+        {children}
+      </main>
     </div>
   );
 };
