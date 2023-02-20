@@ -10,15 +10,15 @@ import LibraryNavBar from "./LibraryNavBar";
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [displayNav, setDisplayNav] = useState(false);
 
-  const links: { path: string; title: string }[] = [
-    { path: "/", title: "Home" },
-    { path: "/library", title: "Library" },
-    { path: "/play-ground", title: "Playground" },
+  const links: { path: string; title: string; sub: string }[] = [
+    { path: "/", title: "Home", sub: "" },
+    { path: "/library", title: "Library", sub: "library" },
+    { path: "/playground", title: "Playground", sub: "playground" },
   ];
 
   const routePath: string = useRouter().pathname;
 
-  console.log(routePath);
+  console.log(routePath.slice(1));
 
   const toggleNavDisplay = () => {
     setDisplayNav((prevState) => !prevState);
@@ -38,7 +38,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           />
         )}
         <nav
-          className={`ml-auto sm:absolute sm:h-screen sm:flex sm:top-0 sm:w-full sm:left-0 sm:ml-0 sm:transition-all sm:bg-color-bg-transparent  sm:duration-300 ${
+          className={`ml-auto sm:absolute sm:h-screen sm:flex sm:top-0 sm:w-full sm:left-0 sm:ml-0 sm:transition-all sm:bg-color-bg-transparent z-10  sm:duration-300 ${
             displayNav ? " sm:translate-x-0" : "sm:-translate-x-full"
           }`}
         >
@@ -65,8 +65,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           />
         </nav>
       </header>
-      <main>
-        {routePath.includes("/library") && <LibraryNavBar />}
+      <main className="flex">
+        {routePath.includes("library") && <LibraryNavBar />}
         {children}
       </main>
     </div>

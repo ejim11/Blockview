@@ -11,8 +11,8 @@ module.exports = {
       "color-dark-blue": "#06283D",
       "color-dark-blue-2": "#144272",
       "color-light-blue": "#1363DF",
-      "color-bg-transparent": "rgba(20, 66, 114, 0.51)",
-      // "color-border": "#BDBDBD",
+      "color-bg-transparent": "rgba(20, 66, 114, 0.11)",
+      "color-border": "#BDBDBD",
 
       // "text-p-color": "#333333",
       // "color-red": "rgb(220 38 38)",
