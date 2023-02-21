@@ -64,7 +64,7 @@ const TopicListModal = ({
               key={i}
               className={`shadow-sm px-4 py-2 text-base font-medium hover:text-color-light-blue cursor-pointer  ${
                 libraryId === item.toLowerCase() ||
-                subList.toLowerCase() === item.toLowerCase()
+                subList?.toLowerCase() === item.toLowerCase()
                   ? "text-color-light-blue"
                   : "text-color-dark-blue-2"
               }`}
