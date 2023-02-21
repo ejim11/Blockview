@@ -1,7 +1,7 @@
 import topics from "./utils/topics";
 import { Topic } from "./utils/types";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const TopicListModal = ({
   index,
@@ -30,9 +30,12 @@ const TopicListModal = ({
     }
   };
 
-  const item = localStorage.getItem("item");
+  const [subList, setSubList] = useState("");
 
-  const [subList, setSubList] = useState(item || "");
+  useEffect(() => {
+    const item: any = localStorage.getItem("item");
+    setSubList(item);
+  }, []);
 
   const topic: Topic | undefined = topics.find(
     (topic: Topic) => topic.number === index
