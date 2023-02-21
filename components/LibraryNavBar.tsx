@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import topics from "./utils/topics";
 import { useRouter } from "next/router";
 import TopicListModal from "./TopicListModal";
+import { useEffect } from "react";
 
 const LibraryNavBar = () => {
   const router = useRouter();
 
-  const index: any = localStorage.getItem("NavOpenIndex");
-
   const [topicIndex, setTopicIndex] = useState();
   const [displayModal, setDisplaymodal] = useState(false);
-  const [navIndexOpen, setNavIndexOpen] = useState(
-    JSON.parse(index) || undefined
-  );
+  const [navIndexOpen, setNavIndexOpen] = useState(undefined);
+
+  useEffect(() => {
+    const index: any = localStorage.getItem("NavOpenIndex");
+    setNavIndexOpen(JSON.parse(index));
+  }, []);
 
   return (
     <div
