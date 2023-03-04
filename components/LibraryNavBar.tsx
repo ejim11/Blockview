@@ -26,10 +26,10 @@ const LibraryNavBar = () => {
           {topics.map((topic, i) => (
             <li
               key={i}
-              className={`w-[70%] flex items-center justify-center h-14 shadow-sm border rounded-lg mb-5 font-extrabold  text-color-white transition-all duration-200 ease-linear ${
+              className={`w-[70%] flex items-center justify-center h-14 shadow-sm border-4 rounded-lg mb-5 font-extrabold  transition-all duration-200 ease-linear bg-color-white ${
                 navIndexOpen === topic.number
-                  ? "bg-color-light-blue border-color-light-blue"
-                  : "bg-color-dark-blue border-color-dark-blue"
+                  ? " border-color-light-blue text-color-light-blue"
+                  : " border-color-dark-blue text-color-dark-blue"
               }  text-xl cursor-pointer`}
               onClick={() => {
                 const index: any = topic.number;
