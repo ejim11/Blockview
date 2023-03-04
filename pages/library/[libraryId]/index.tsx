@@ -1,9 +1,7 @@
-import { useRouter } from "next/router";
+import Card from "../../../components/Card";
 
-const TopicDetails = () => {
-  const route = useRouter();
-  console.log(route);
-  return;
+const TopicDetail = () => {
+  return <Card>active</Card>;
 };
 
-export default TopicDetails;
+export default TopicDetail;

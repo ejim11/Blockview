@@ -1,14 +1,25 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect } from "react";
 import decentralize from "../public/assets/decentralize.png";
 import publicKeyImg from "../public/assets/public-key.png";
 import blockchainImg from "../public/assets/blockchain.png";
 import { Inter } from "@next/font/google";
-import { useRouter } from "next/router";
+import { useAppDispatch } from "../hooks/customHooks";
+import { libraryAction } from "../slices/librarySlice";
 
 export default function Home() {
-  const router = useRouter();
-  console.log(router);
+  const dispatchFn = useAppDispatch();
+
+  useEffect(() => {
+    const storedNavIndex: any = localStorage.getItem("NavOpenIndex");
+    const index = JSON.parse(storedNavIndex);
+    const storedSubItem: any = localStorage.getItem("item");
+
+    dispatchFn(libraryAction.setNavIndex(index));
+    dispatchFn(libraryAction.setSubItem(storedSubItem));
+  });
+
   return (
     <>
       <Head>
