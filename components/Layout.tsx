@@ -13,7 +13,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const links: { path: string; title: string; sub: string }[] = [
     { path: "/", title: "Home", sub: "" },
     { path: "/library", title: "Library", sub: "library" },
-    { path: "/playground", title: "Playground", sub: "playground" },
+    { path: "/explorer", title: "Explorer", sub: "explorer" },
   ];
 
   const routePath: string = useRouter().pathname;
@@ -25,8 +25,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   return (
-    <div className="w-[70%] mx-auto 2xl:w-full sm:relative">
-      <header className="flex items-center h-14 px-5 shadow-sm">
+    <div className="sm:relative w-full  ">
+      <header className="flex items-center h-14 px-5 shadow-sm border-b border-color-border">
         <FaUncharted className="text-color-dark-blue mr-2 w-6 h-6" />
         <a className="text-color-dark-blue text-2xl font-bold tracking-wide">
           BLOCKVIEW
@@ -65,7 +65,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           />
         </nav>
       </header>
-      <main className="flex">
+      <main className="flex w-full  ">
         {routePath.includes("library") && <LibraryNavBar />}
         {children}
       </main>

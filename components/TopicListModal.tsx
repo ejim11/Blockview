@@ -2,25 +2,25 @@ import topics from "./utils/topics";
 import { Topic } from "./utils/types";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../hooks/customHooks";
+import { libraryAction } from "../slices/librarySlice";
 
 const TopicListModal = ({
   index,
   display,
   setDisplay,
   setIndex,
-  setNavOpen,
 }: {
   index: number | undefined;
   display: boolean;
   setIndex: Function;
   setDisplay: Function;
-  setNavOpen: Function;
 }) => {
-  console.log(index);
+  const dispatchFn = useAppDispatch();
 
   const router = useRouter();
 
-  console.log(router);
+  const subItem = useAppSelector((state) => state.library.subItem);
 
   const closeTopicListModal: any = (e: {
     target: { dataset: { close: string } };
@@ -30,12 +30,10 @@ const TopicListModal = ({
     }
   };
 
-  const [subList, setSubList] = useState("");
-
   useEffect(() => {
     const item: any = localStorage.getItem("item");
-    setSubList(item);
-  }, []);
+    dispatchFn(libraryAction.setSubItem(item));
+  }, [dispatchFn]);
 
   const topic: Topic | undefined = topics.find(
     (topic: Topic) => topic.number === index
@@ -45,7 +43,7 @@ const TopicListModal = ({
 
   return (
     <div
-      className={`h-[calc(100vh-3.6rem)] left-[6rem] z-5 top-[3.6rem] w-[calc(100vw-6rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
+      className={`h-[calc(100vh-3.5rem)] left-[6rem] z-5 top-[3.6rem] w-[calc(100vw-6rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
         display ? "opacity-1 visible" : "opacity-0 invisible"
       }`}
       data-close={"close-modal"}
@@ -64,20 +62,15 @@ const TopicListModal = ({
               key={i}
               className={`shadow-sm px-4 py-2 text-base font-medium hover:text-color-light-blue cursor-pointer  ${
                 libraryId === item.toLowerCase() ||
-                subList?.toLowerCase() === item.toLowerCase()
+                subItem?.toLowerCase() === item.toLowerCase()
                   ? "text-color-light-blue"
                   : "text-color-dark-blue-2"
               }`}
               onClick={() => {
                 router.push(`/library/${item.toLowerCase()}`);
                 setDisplay(false);
-                setNavOpen(topic.number);
-                localStorage.setItem(
-                  "NavOpenIndex",
-                  JSON.stringify(topic.number)
-                );
-                setSubList(item);
-                localStorage.setItem("item", item);
+                dispatchFn(libraryAction.setNavIndex(topic.number));
+                dispatchFn(libraryAction.setSubItem(item));
               }}
             >
               {item}
