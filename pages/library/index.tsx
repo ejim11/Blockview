@@ -18,7 +18,13 @@ const ResourceLibrary = () => {
           <li
             key={i}
             onClick={() => {
-              router.push(`/library/${subTitle.toLowerCase()}`);
+              router.push(
+                `/library/${subTitle
+                  .toLowerCase()
+                  .slice()
+                  .split(" ")
+                  .join("-")}`
+              );
               dispatchFn(libraryAction.setNavIndex(topic.number));
               dispatchFn(libraryAction.setSubItem(subTitle));
             }}
@@ -36,7 +42,14 @@ const ResourceLibrary = () => {
         <h2 className="text-3xl font-medium text-color-dark-blue mb-2">
           Welcome,
         </h2>
-
+        <p
+          onClick={() => {
+            router.push("/library/web2vs-web3");
+          }}
+        >
+          {" "}
+          show
+        </p>
         <p className="my-2 ">
           Web 3 and blockchain are two of the most revolutionary technologies of
           the 21st century. They are transforming the way we do business,

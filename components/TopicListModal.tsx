@@ -67,7 +67,9 @@ const TopicListModal = ({
                   : "text-color-dark-blue-2"
               }`}
               onClick={() => {
-                router.push(`/library/${item.toLowerCase()}`);
+                router.push(
+                  `/library/${item.toLowerCase().slice().split(" ").join("-")}`
+                );
                 setDisplay(false);
                 dispatchFn(libraryAction.setNavIndex(topic.number));
                 dispatchFn(libraryAction.setSubItem(item));

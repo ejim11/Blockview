@@ -5,12 +5,12 @@ const topics = [
     subTitles: [
       "The Web 2 vs The Web 3",
       "Cryptography",
-      "How The Blockchain uses cryptography",
+      "How the Blockchain uses Cryptography",
     ],
   },
   {
     number: 2,
-    title: "The BlockChain",
+    title: "The Blockchain",
     subTitles: [
       "Why is the Blockchain so interesting?",
       "The architecture of the blockchain",
