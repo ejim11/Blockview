@@ -1,4 +1,5 @@
 import Card from "../../../components/Card";
+import next from "next";
 
 const Web2AndWeb3 = () => {
   return (
