@@ -1,5 +1,5 @@
 export interface Topic {
   number: number;
   title: string;
-  subTitles: string[];
+  subTitles: { title: string; route: string }[];
 }
