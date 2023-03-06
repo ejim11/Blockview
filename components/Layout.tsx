@@ -4,21 +4,30 @@ import { useRouter } from "next/router";
 import { FaUncharted } from "react-icons/fa";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LibraryNavBar from "./LibraryNavBar";
+import { useAppDispatch, useAppSelector } from "../hooks/customHooks";
+import { libraryAction } from "../slices/librarySlice";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [displayNav, setDisplayNav] = useState(false);
 
-  const links: { path: string; title: string; sub: string }[] = [
-    { path: "/", title: "Home", sub: "" },
-    { path: "/library", title: "Library", sub: "library" },
-    { path: "/explorer", title: "Explorer", sub: "explorer" },
+  const links: { path: string; title: string; min: string }[] = [
+    { path: "/", title: "Home", min: "home" },
+    { path: "/library", title: "Library", min: "library" },
+    { path: "/explorer", title: "Explorer", min: "explorer" },
   ];
+
+  const mainRoute = useAppSelector((state) => state.library.mainRoute);
+
+  const dispatchFn = useAppDispatch();
 
   const routePath: string = useRouter().pathname;
 
-  console.log(routePath.slice(1));
+  useEffect(() => {
+    const storedRoute: any = localStorage.getItem("mainRoute");
+    dispatchFn(libraryAction.setMainRoute(storedRoute));
+  }, [dispatchFn]);
 
   const toggleNavDisplay = () => {
     setDisplayNav((prevState) => !prevState);
@@ -26,7 +35,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="sm:relative w-full  ">
-      <header className="flex items-center h-14 px-5 shadow-sm border-b border-color-border">
+      <header className="flex items-center h-14 px-5  border-b border-color-border">
         <FaUncharted className="text-color-dark-blue mr-2 w-6 h-6" />
         <a className="text-color-dark-blue text-2xl font-bold tracking-wide">
           BLOCKVIEW
@@ -46,10 +55,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             {links.map((item, i) => (
               <li key={i} className="sm:w-full sm:my-2">
                 <Link
-                  onClick={toggleNavDisplay}
+                  onClick={() => {
+                    toggleNavDisplay;
+                    dispatchFn(libraryAction.setMainRoute(item.min));
+                  }}
                   href={item.path}
                   className={`ml-4 text-lg sm:ml-0   sm:px-4 sm:py-4 ${
-                    routePath === item.path
+                    mainRoute === item.min
                       ? "text-color-dark-blue-2 sm:text-color-light-blue"
                       : "text-[#84A9AC] sm:text-color-white"
                   }`}

@@ -9,6 +9,18 @@ import { libraryAction } from "../slices/librarySlice";
 const LibraryNavBar = () => {
   const router = useRouter();
 
+  const topicPath: string = router.asPath.slice(9);
+  console.log(topicPath);
+
+  const list = topics.find((topic) => {
+    const [subTitle] = topic.subTitles.filter(
+      (subTitle) => subTitle?.route === topicPath
+    );
+    if (subTitle) return true;
+  });
+
+  console.log("list", list);
+
   const dispatchFn = useAppDispatch();
 
   const navIndex = useAppSelector((state) => state.library.navIndex);
@@ -26,13 +38,13 @@ const LibraryNavBar = () => {
       className="flex  
     "
     >
-      <nav className="w-[6rem]  border-r border-color-border h-[calc(100vh-3.5rem)] ">
+      <nav className="w-[6rem] sm:w-[4.5rem]  border-r border-color-border h-[calc(100vh-3.5rem)] ">
         <ul className="flex flex-col items-center pt-5">
           {topics.map((topic, i) => (
             <li
               key={i}
               className={`w-[70%] flex items-center justify-center h-14 shadow-sm border-4 rounded-lg mb-5 font-extrabold  transition-all duration-200 ease-linear bg-color-white ${
-                navIndex === topic.number
+                list?.number === topic.number || navIndex === topic.number
                   ? " border-color-light-blue text-color-light-blue"
                   : " border-color-dark-blue text-color-dark-blue"
               }  text-xl cursor-pointer`}
@@ -49,7 +61,6 @@ const LibraryNavBar = () => {
       </nav>
       <TopicListModal
         index={topicIndex}
-        setIndex={setTopicIndex}
         setDisplay={setDisplaymodal}
         display={displayModal}
       />

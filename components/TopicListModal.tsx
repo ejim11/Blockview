@@ -1,7 +1,6 @@
 import topics from "./utils/topics";
-import { Topic } from "./utils/types";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../hooks/customHooks";
 import { libraryAction } from "../slices/librarySlice";
 
@@ -9,18 +8,24 @@ const TopicListModal = ({
   index,
   display,
   setDisplay,
-  setIndex,
 }: {
   index: number | undefined;
   display: boolean;
-  setIndex: Function;
   setDisplay: Function;
 }) => {
-  const dispatchFn = useAppDispatch();
-
   const router = useRouter();
 
+  const dispatchFn = useAppDispatch();
+
   const subItem = useAppSelector((state) => state.library.subItem);
+
+  const topicPath: string = router.asPath.slice(9);
+
+  useEffect(() => {
+    const route: any = localStorage.getItem("item");
+    console.log(route);
+    dispatchFn(libraryAction.setSubItem(route));
+  }, [dispatchFn]);
 
   const closeTopicListModal: any = (e: {
     target: { dataset: { close: string } };
@@ -30,20 +35,11 @@ const TopicListModal = ({
     }
   };
 
-  useEffect(() => {
-    const item: any = localStorage.getItem("item");
-    dispatchFn(libraryAction.setSubItem(item));
-  }, [dispatchFn]);
-
-  const topic: Topic | undefined = topics.find(
-    (topic: Topic) => topic.number === index
-  );
-
-  const libraryId = router.query.libraryId;
+  const topic: any = topics.find((topic: any) => topic.number === index);
 
   return (
     <div
-      className={`h-[calc(100vh-3.5rem)] left-[6rem] z-5 top-[3.6rem] w-[calc(100vw-6rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
+      className={`h-[calc(100vh-3.5rem)] left-[6rem] z-5 top-[3.5rem] w-[calc(100vw-6rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
         display ? "opacity-1 visible" : "opacity-0 invisible"
       }`}
       data-close={"close-modal"}
@@ -57,25 +53,25 @@ const TopicListModal = ({
         </div>
 
         <ul className="">
-          {topic?.subTitles.map((item: string, i: number) => (
-            <li
-              key={i}
-              className={`shadow-sm px-4 py-2 text-base font-medium hover:text-color-light-blue cursor-pointer  ${
-                libraryId === item.toLowerCase() ||
-                subItem?.toLowerCase() === item.toLowerCase()
-                  ? "text-color-light-blue"
-                  : "text-color-dark-blue-2"
-              }`}
-              onClick={() => {
-                router.push(`/library/${item.toLowerCase()}`);
-                setDisplay(false);
-                dispatchFn(libraryAction.setNavIndex(topic.number));
-                dispatchFn(libraryAction.setSubItem(item));
-              }}
-            >
-              {item}
-            </li>
-          ))}
+          {topic?.subTitles.map(
+            (item: { title: string; route: string }, i: number) => (
+              <li
+                key={i}
+                className={`shadow-sm px-4 py-2 text-base font-medium hover:text-color-light-blue cursor-pointer  ${
+                  topicPath === item.route || subItem === item.route
+                    ? "text-color-light-blue"
+                    : "text-color-dark-blue-2"
+                }`}
+                onClick={() => {
+                  router.push(`/library/${item.route}`);
+                  dispatchFn(libraryAction.setSubItem(item.route));
+                  setDisplay(false);
+                }}
+              >
+                {item.title}
+              </li>
+            )
+          )}
         </ul>
       </div>
     </div>
