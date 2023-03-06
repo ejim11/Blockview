@@ -39,13 +39,17 @@ const TopicListModal = ({
 
   return (
     <div
-      className={`h-[calc(100vh-3.5rem)] left-[6rem] z-5 top-[3.5rem] w-[calc(100vw-6rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
+      className={`h-[calc(100vh-3.5rem)] left-[6rem] sm:left-[4.5rem] z-5 top-[3.5rem] w-[calc(100vw-6rem)] sm:w-[calc(100vw-4.5rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
         display ? "opacity-1 visible" : "opacity-0 invisible"
       }`}
       data-close={"close-modal"}
       onClick={closeTopicListModal}
     >
-      <div className="w-[40%] sm:w-full bg-color-white h-full cursor-default ">
+      <div
+        className="w-[40%] sm:w-full bg-color-white h-full cursor-default "
+        data-close={"close-modal"}
+        onClick={closeTopicListModal}
+      >
         <div className="w-full shadow-sm">
           <p className="w-[80%]  font-semibold text-2xl py-2 px-4  text-color-dark-blue">
             {topic?.title}

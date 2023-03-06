@@ -26,15 +26,19 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   useEffect(() => {
     const storedRoute: any = localStorage.getItem("mainRoute");
-    dispatchFn(libraryAction.setMainRoute(storedRoute));
+    if (storedRoute) {
+      dispatchFn(libraryAction.setMainRoute(storedRoute));
+    }
   }, [dispatchFn]);
+
+  console.log(mainRoute);
 
   const toggleNavDisplay = () => {
     setDisplayNav((prevState) => !prevState);
   };
 
   return (
-    <div className="sm:relative w-full  ">
+    <div className="sm:relative w-screen h-screen ">
       <header className="flex items-center h-14 px-5  border-b border-color-border">
         <FaUncharted className="text-color-dark-blue mr-2 w-6 h-6" />
         <a className="text-color-dark-blue text-2xl font-bold tracking-wide">
@@ -50,13 +54,19 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           className={`ml-auto sm:absolute sm:h-screen sm:flex sm:top-0 sm:w-full sm:left-0 sm:ml-0 sm:transition-all sm:bg-color-bg-transparent z-10  sm:duration-300 ${
             displayNav ? " sm:translate-x-0" : "sm:-translate-x-full"
           }`}
+          data-close="closeNavModal"
+          onClick={(e: any) => {
+            if (e.target.dataset.close) {
+              toggleNavDisplay();
+            }
+          }}
         >
           <ul className="flex items-center sm:flex-col sm:bg-color-dark-blue sm:w-[75%] sm:pt-4 ">
             {links.map((item, i) => (
               <li key={i} className="sm:w-full sm:my-2">
                 <Link
                   onClick={() => {
-                    toggleNavDisplay;
+                    toggleNavDisplay();
                     dispatchFn(libraryAction.setMainRoute(item.min));
                   }}
                   href={item.path}

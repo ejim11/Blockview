@@ -31,7 +31,9 @@ export default function Home() {
       </Head>
       <div className="flex w-full flex-col">
         <section className="bg-gradient-to-b  from-color-dark-blue-2 to-color-white h-[85vh] text-color-white flex flex-col items-center justify-center text-center px-8 sm:px5">
-          <h1 className="text-6xl">The Future of Finance: The Blockchain</h1>
+          <h1 className="text-6xl sm:text-4xl">
+            The Future of Finance: The Blockchain
+          </h1>
           <p className="text-2xl mt-2">
             Get the Best Abstracted Insights on Blockchain Technology and Its
             Impacts on Business, Economy, and Life.

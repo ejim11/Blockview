@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const librarySlice = createSlice({
   name: "library",
   initialState: {
-    mainRoute: "Home",
+    mainRoute: "home",
     navIndex: undefined,
     subItem: "",
   },

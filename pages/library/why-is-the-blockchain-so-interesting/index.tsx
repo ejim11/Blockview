@@ -1,3 +1,5 @@
+import next from "next";
+
 const WhyTheBlockchainIsInteresting = () => {
   return;
 };
