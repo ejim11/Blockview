@@ -23,7 +23,6 @@ const TopicListModal = ({
 
   useEffect(() => {
     const route: any = localStorage.getItem("item");
-    console.log(route);
     dispatchFn(libraryAction.setSubItem(route));
   }, [dispatchFn]);
 
@@ -69,6 +68,8 @@ const TopicListModal = ({
                 onClick={() => {
                   router.push(`/library/${item.route}`);
                   dispatchFn(libraryAction.setSubItem(item.route));
+                  dispatchFn(libraryAction.setNavIndex(topic.number));
+
                   setDisplay(false);
                 }}
               >

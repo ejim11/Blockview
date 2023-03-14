@@ -4,9 +4,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { libraryAction } from "../../slices/librarySlice";
 import Card from "../../components/Card";
+import { useAppDispatch } from "../../hooks/customHooks";
 
 const ResourceLibrary = () => {
   const router = useRouter();
+  const dispatchFn = useAppDispatch();
 
   const topicsList = topics.map((topic, i) => (
     <li key={i} className="mb-5">
@@ -20,7 +22,8 @@ const ResourceLibrary = () => {
             <li
               key={i}
               onClick={() => {
-                router.push(`/library/${subTitle?.route}`);
+                dispatchFn(libraryAction.setSubItem(subTitle?.route));
+                dispatchFn(libraryAction.setNavIndex(topic.number));
               }}
             >
               <Link href={`/library/${subTitle?.route}`}>
