@@ -1,4 +1,3 @@
-import Next from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaUncharted } from "react-icons/fa";
@@ -6,32 +5,17 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import { useState, useEffect } from "react";
 import LibraryNavBar from "./LibraryNavBar";
-import { useAppDispatch, useAppSelector } from "../hooks/customHooks";
-import { libraryAction } from "../slices/librarySlice";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [displayNav, setDisplayNav] = useState(false);
 
-  const links: { path: string; title: string; min: string }[] = [
-    { path: "/", title: "Home", min: "home" },
-    { path: "/library", title: "Library", min: "library" },
-    { path: "/explorer", title: "Explorer", min: "explorer" },
+  const links: { path: string; title: string }[] = [
+    { path: "/home", title: "Home" },
+    { path: "/library", title: "Library" },
+    { path: "/explorer", title: "Explorer" },
   ];
 
-  const mainRoute = useAppSelector((state) => state.library.mainRoute);
-
-  const dispatchFn = useAppDispatch();
-
   const routePath: string = useRouter().pathname;
-
-  useEffect(() => {
-    const storedRoute: any = localStorage.getItem("mainRoute");
-    if (storedRoute) {
-      dispatchFn(libraryAction.setMainRoute(storedRoute));
-    }
-  }, [dispatchFn]);
-
-  console.log(mainRoute);
 
   const toggleNavDisplay = () => {
     setDisplayNav((prevState) => !prevState);
@@ -63,15 +47,14 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         >
           <ul className="flex items-center sm:flex-col sm:bg-color-dark-blue sm:w-[75%] sm:pt-4 ">
             {links.map((item, i) => (
-              <li key={i} className="sm:w-full sm:my-2">
+              <li key={i} className="sm:w-full sm:my-2 cursor-pointer">
                 <Link
                   onClick={() => {
                     toggleNavDisplay();
-                    dispatchFn(libraryAction.setMainRoute(item.min));
                   }}
                   href={item.path}
-                  className={`ml-4 text-lg sm:ml-0   sm:px-4 sm:py-4 ${
-                    mainRoute === item.min
+                  className={`ml-4 text-lg sm:ml-0  p-1  sm:px-4 sm:py-4 ${
+                    routePath.includes(item.title.toLowerCase())
                       ? "text-color-dark-blue-2 sm:text-color-light-blue"
                       : "text-[#84A9AC] sm:text-color-white"
                   }`}

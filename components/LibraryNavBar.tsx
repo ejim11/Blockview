@@ -10,16 +10,13 @@ const LibraryNavBar = () => {
   const router = useRouter();
 
   const topicPath: string = router.asPath.slice(9);
-  console.log(topicPath);
 
-  const list = topics.find((topic) => {
+  const chosenTopic = topics.find((topic) => {
     const [subTitle] = topic.subTitles.filter(
       (subTitle) => subTitle?.route === topicPath
     );
     if (subTitle) return true;
   });
-
-  console.log("list", list);
 
   const dispatchFn = useAppDispatch();
 
@@ -44,7 +41,8 @@ const LibraryNavBar = () => {
             <li
               key={i}
               className={`w-[70%] flex items-center justify-center h-14 shadow-sm border-4 rounded-lg mb-5 font-extrabold  transition-all duration-200 ease-linear bg-color-white ${
-                list?.number === topic.number || navIndex === topic.number
+                chosenTopic?.number === topic.number ||
+                navIndex === topic.number
                   ? " border-color-light-blue text-color-light-blue"
                   : " border-color-dark-blue text-color-dark-blue"
               }  text-xl cursor-pointer`}
