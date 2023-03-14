@@ -1,32 +1,29 @@
-import Next from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaUncharted } from "react-icons/fa";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LibraryNavBar from "./LibraryNavBar";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [displayNav, setDisplayNav] = useState(false);
 
-  const links: { path: string; title: string; sub: string }[] = [
-    { path: "/", title: "Home", sub: "" },
-    { path: "/library", title: "Library", sub: "library" },
-    { path: "/playground", title: "Playground", sub: "playground" },
+  const links: { path: string; title: string }[] = [
+    { path: "/home", title: "Home" },
+    { path: "/library", title: "Library" },
+    { path: "/explorer", title: "Explorer" },
   ];
 
   const routePath: string = useRouter().pathname;
-
-  console.log(routePath.slice(1));
 
   const toggleNavDisplay = () => {
     setDisplayNav((prevState) => !prevState);
   };
 
   return (
-    <div className="w-[70%] mx-auto 2xl:w-full sm:relative">
-      <header className="flex items-center h-14 px-5 shadow-sm">
+    <div className="sm:relative w-screen h-screen ">
+      <header className="flex items-center h-14 px-5  border-b border-color-border">
         <FaUncharted className="text-color-dark-blue mr-2 w-6 h-6" />
         <a className="text-color-dark-blue text-2xl font-bold tracking-wide">
           BLOCKVIEW
@@ -41,15 +38,23 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           className={`ml-auto sm:absolute sm:h-screen sm:flex sm:top-0 sm:w-full sm:left-0 sm:ml-0 sm:transition-all sm:bg-color-bg-transparent z-10  sm:duration-300 ${
             displayNav ? " sm:translate-x-0" : "sm:-translate-x-full"
           }`}
+          data-close="closeNavModal"
+          onClick={(e: any) => {
+            if (e.target.dataset.close) {
+              toggleNavDisplay();
+            }
+          }}
         >
           <ul className="flex items-center sm:flex-col sm:bg-color-dark-blue sm:w-[75%] sm:pt-4 ">
             {links.map((item, i) => (
-              <li key={i} className="sm:w-full sm:my-2">
+              <li key={i} className="sm:w-full sm:my-2 cursor-pointer">
                 <Link
-                  onClick={toggleNavDisplay}
+                  onClick={() => {
+                    toggleNavDisplay();
+                  }}
                   href={item.path}
-                  className={`ml-4 text-lg sm:ml-0   sm:px-4 sm:py-4 ${
-                    routePath === item.path
+                  className={`ml-4 text-lg sm:ml-0  p-1  sm:px-4 sm:py-4 ${
+                    routePath.includes(item.title.toLowerCase())
                       ? "text-color-dark-blue-2 sm:text-color-light-blue"
                       : "text-[#84A9AC] sm:text-color-white"
                   }`}
@@ -65,7 +70,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           />
         </nav>
       </header>
-      <main className="flex">
+      <main className="flex w-full  ">
         {routePath.includes("library") && <LibraryNavBar />}
         {children}
       </main>
