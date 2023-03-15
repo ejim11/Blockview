@@ -20,12 +20,16 @@ const topics = [
         route: "why-is-the-blockchain-so-interesting",
       },
       {
-        title: "The architecture of the blockchain",
+        title: "The Architecture of the Blockchain",
         route: "the-architecture-of-the-blockchain",
       },
       {
-        title: "Understanding the blockchain using Bitcoin and Ethereum",
-        route: "understanding-the-blockchain-using-bitcoin-and-ethereum",
+        title: "Keeping Track of Blockchain User State",
+        route: "keeping-track-of-blockchain-user-state",
+      },
+      {
+        title: "Understanding the blockchain using Ethereum",
+        route: "understanding-the-blockchain-using-ethereum",
       },
       {
         title: "Attacks on the system",
@@ -41,6 +45,10 @@ const topics = [
       {
         title: "Making transactions on a blockchain network",
         route: "making-transactions-on-a-blockchain-network",
+      },
+      {
+        title: "Smart Contract Interactions",
+        route: "smart-contract-interactions",
       },
       {
         title: "How are transactions validated?",
