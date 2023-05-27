@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { FaUncharted } from "react-icons/fa";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import LibraryNavBar from "./LibraryNavBar";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -22,12 +22,15 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   return (
-    <div className="sm:relative w-screen h-screen ">
-      <header className="flex items-center h-14 px-5  border-b border-color-border">
-        <FaUncharted className="text-color-dark-blue mr-2 w-6 h-6" />
-        <a className="text-color-dark-blue text-2xl font-bold tracking-wide">
+    <div className="sm:relative w-screen ">
+      <header className="flex items-center h-[8rem] px-[3rem] fixed top-0 left-0 w-full bg-color-white border-b border-color-border">
+        <Link href={"/home"} className="flex items-center">
+        <FaUncharted className="text-color-dark-blue mr-2 w-[2.5rem] h-[2.5rem]" />
+        <p className="text-color-dark-blue text-[2.5rem] font-bold tracking-wide">
           BLOCKVIEW
-        </a>
+        </p>
+        </Link>
+        
         {!displayNav && (
           <RiMenu3Fill
             className="hidden sm:block ml-auto w-6 h-6"
@@ -53,7 +56,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     toggleNavDisplay();
                   }}
                   href={item.path}
-                  className={`ml-4 text-lg sm:ml-0  p-1  sm:px-4 sm:py-4 ${
+                  className={`ml-4 text-[1.8rem] sm:ml-0  p-1  sm:px-4 sm:py-4 ${
                     routePath.includes(item.title.toLowerCase())
                       ? "text-color-dark-blue-2 sm:text-color-light-blue"
                       : "text-[#84A9AC] sm:text-color-white"
