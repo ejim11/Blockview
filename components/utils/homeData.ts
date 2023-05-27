@@ -11,12 +11,12 @@ const homeData = [
     },
     {
     title: "Comprehend Distributed Decentralized Networks",
-    text: "In the library, We will go through the rudiments of distributed decentralized networks such as what they are, how they work, their advantages, and the challenges of implementing them. You will then learn about the various applications of distributed decentralized networks, from data storage to cryptocurrency. We will also discuss the potential for these networks to impact other areas, such as healthcare, finance, and government",
+    text: "In the library, We will go through the rudiments of distributed decentralized networks such as what they are, how they work, their advantages, and the challenges of implementing them. You will then learn about the various applications of distributed decentralized networks, from data storage to cryptocurrency. We will also discuss the potential for these networks to impact other areas, such as healthcare, finance, and government.",
     image: decentralizedImg
 },
 {
     title: "Understand Why It Is Called A Blockchain",
-    text: "We will breakdown the basics of the blockchain, the block infrastructure and the security advantages of implementing them. You will then learn how blocks in the chain are formed, validated and mined. In the Explorer, You will be able to see the properties of a mined block in the ethereum network and understand their various definitions",
+    text: "We will breakdown the basics of the blockchain, the block infrastructure and the security advantages of implementing them. You will then learn how blocks in the chain are formed, validated and mined. In the Explorer, You will be able to see the properties of a mined block in the ethereum network and understand their various definitions.",
     image: bkchainImg
 },
 

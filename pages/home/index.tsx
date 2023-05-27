@@ -73,7 +73,7 @@ export default function Home() {
             <Image
               src={data.image}
               alt={data.title}
-              className={`w-[45%]  h-[40rem]  md:mx-auto ${i%2 === 0 ? "order-2": "order-1"}`}
+              className={`w-[45%]  h-[40rem] rounded-lg shadow-2xl  md:mx-auto ${i%2 === 0 ? "order-2": "order-1"}`}
             />
           </div>)}
         </section>
