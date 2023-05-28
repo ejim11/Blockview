@@ -44,7 +44,7 @@ export default function Home() {
           <h1 className="text-[5.5rem] sm:text-4xl">
             The Future of Finance: The Blockchain
           </h1>
-          <p className="text-[2rem] mt-2">
+          <p className="text-[2rem] mt-2 capitalize">
             Get the Best Abstracted Insights on Blockchain Technology and Its
             Impacts on Business, Economy, and Life.
           </p>

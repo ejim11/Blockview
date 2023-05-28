@@ -3,7 +3,7 @@ const topics = [
     number: 1,
     title: "Why The Web3?",
     subTitles: [
-      { title: "The Web 2 vs The Web 3", route: "the-web-2-vs-the-web-3" },
+      { title: "The Web3 Revolution", route: "the-web3-revolution" },
       { title: "Cryptography", route: "cryptography" },
       {
         title: "How the Blockchain uses Cryptography",
@@ -24,8 +24,8 @@ const topics = [
         route: "the-architecture-of-the-blockchain",
       },
       {
-        title: "Understanding the blockchain using Bitcoin and Ethereum",
-        route: "understanding-the-blockchain-using-bitcoin-and-ethereum",
+        title: "Understanding the blockchain technology using Bitcoin and Ethereum",
+        route: "understanding-the-blockchain-technology-using-bitcoin-and-ethereum",
       },
       {
         title: "Attacks on the system",

@@ -24,7 +24,8 @@ const TopicListModal = ({
   useEffect(() => {
     const route: any = localStorage.getItem("item");
     dispatchFn(libraryAction.setSubItem(route));
-  }, [dispatchFn]);
+    // dispatchFn(libraryAction.setNavIndex(topic.number));
+  }, [dispatchFn,subItem]);
 
   const closeTopicListModal: any = (e: {
     target: { dataset: { close: string } };
@@ -38,7 +39,7 @@ const TopicListModal = ({
 
   return (
     <div
-      className={`h-[calc(100vh-3.5rem)] left-[6rem] sm:left-[4.5rem] z-5 top-[3.5rem] w-[calc(100vw-6rem)] sm:w-[calc(100vw-4.5rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
+      className={`h-[calc(100vh-8rem)] left-[8rem] sm:left-[4.5rem] text-[1.8rem] z-5 top-[8rem] w-[calc(100vw-6rem)] sm:w-[calc(100vw-4.5rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
         display ? "opacity-1 visible" : "opacity-0 invisible"
       }`}
       data-close={"close-modal"}
@@ -49,8 +50,8 @@ const TopicListModal = ({
         data-close={"close-modal"}
         onClick={closeTopicListModal}
       >
-        <div className="w-full shadow-sm">
-          <p className="w-[80%]  font-semibold text-2xl py-2 px-4  text-color-dark-blue">
+        <div className="w-full border-b border-color-border">
+          <p className="w-[80%]  font-semibold text-[2.5rem] px-[2rem] py-[1.5rem]   text-color-dark-blue">
             {topic?.title}
           </p>
         </div>
@@ -60,7 +61,7 @@ const TopicListModal = ({
             (item: { title: string; route: string }, i: number) => (
               <li
                 key={i}
-                className={`shadow-sm px-4 py-2 text-base font-medium hover:text-color-light-blue cursor-pointer  ${
+                className={`border-b border-color-border px-[2rem] py-[1.5rem]  font-medium hover:text-color-light-blue cursor-pointer  ${
                   topicPath === item.route || subItem === item.route
                     ? "text-color-light-blue"
                     : "text-color-dark-blue-2"

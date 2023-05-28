@@ -26,7 +26,7 @@ const ResourceLibrary = () => {
                 dispatchFn(libraryAction.setNavIndex(topic.number));
               }}
             >
-              <Link href={`/library/${subTitle?.route}`}>
+              <Link href={`/library/${subTitle?.route}`} className="capitalize hover:text-color-light-blue transition-all duration-200 ease-in">
                 {subTitle?.title}
               </Link>
             </li>
@@ -38,10 +38,10 @@ const ResourceLibrary = () => {
 
   return (
     <Card>
-      <h2 className="text-3xl font-medium text-color-dark-blue mb-2">
+      <h2 className="text-[3rem] font-medium text-color-dark-blue mb-2">
         Welcome,
       </h2>
-      <p className="my-2 ">
+      <p className="my-2  ">
         Web 3 and blockchain are two of the most revolutionary technologies of
         the 21st century. They are transforming the way we do business, interact
         with each other, and access information. Web 3 is the next generation of
@@ -59,12 +59,12 @@ const ResourceLibrary = () => {
       </p>
       <p className="my-2 ">
         We are going to dive deep and discover what the blockchain is and its
-        uses mainly in providing a secure and transparent network.
+        uses mainly in providing a secure and transparent network for transactions.
       </p>
-      <p className="text-2xl text-color-dark-blue mb-2 mt-4 font-medium">
+      <p className="text-[2rem] text-color-dark-blue mb-2 mt-[3rem] font-medium">
         Topics
       </p>
-      <ul>{topicsList}</ul>
+      <ul >{topicsList}</ul>
     </Card>
   );
 };

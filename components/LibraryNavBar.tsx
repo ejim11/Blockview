@@ -32,15 +32,15 @@ const LibraryNavBar = () => {
 
   return (
     <div
-      className="flex  
+      className="flex mt-[8rem]
     "
     >
-      <nav className="w-[6rem] sm:w-[4.5rem]  border-r border-color-border h-[calc(100vh-3.5rem)] ">
+      <nav className="w-[8rem] sm:w-[4.5rem]  border-r border-color-border h-[calc(100vh-8rem)] ">
         <ul className="flex flex-col items-center pt-5">
           {topics.map((topic, i) => (
             <li
               key={i}
-              className={`w-[70%] flex items-center justify-center h-14 shadow-sm border-4 rounded-lg mb-5 font-extrabold  transition-all duration-200 ease-linear bg-color-white ${
+              className={`w-[70%] flex items-center  text-[2rem] justify-center h-[5rem] shadow-sm border-4 rounded-lg mb-5 font-extrabold  transition-all duration-200 ease-linear bg-color-white ${
                 chosenTopic?.number === topic.number ||
                 navIndex === topic.number
                   ? " border-color-light-blue text-color-light-blue"

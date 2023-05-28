@@ -10,8 +10,8 @@ const homeData = [
         image: pubKeyImg
     },
     {
-    title: "Comprehend Distributed Decentralized Networks",
-    text: "In the library, We will go through the rudiments of distributed decentralized networks such as what they are, how they work, their advantages, and the challenges of implementing them. You will then learn about the various applications of distributed decentralized networks, from data storage to cryptocurrency. We will also discuss the potential for these networks to impact other areas, such as healthcare, finance, and government.",
+    title: "Comprehend Decentralized Distributed Networks",
+    text: "In the library, We will go through the rudiments of decentralized distributed networks such as what they are, how they work, their advantages, and the challenges of implementing them. You will then learn about the various applications of decentralized distributed networks, from data storage to cryptocurrency. We will also discuss the potential for these networks to impact other areas, such as healthcare, finance, and government.",
     image: decentralizedImg
 },
 {
