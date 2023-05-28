@@ -8,7 +8,6 @@ import decentralizedImg from "../../../public/assets/decentralized.png"
 const Web2AndWeb3 = () => {
 
   const next = {
-    title: "next",
     path: "cryptography"
   }
 
