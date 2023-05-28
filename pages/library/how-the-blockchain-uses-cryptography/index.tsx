@@ -4,8 +4,17 @@ import CryptographictxImg from "../../../public/assets/cryptographictransaction.
 import Image from "next/image";
 
 const BlockchainandCryptography = () => {
+
+const prev ={
+  path :"cryptography"
+}
+
+const next = {
+  path : "why-is-the-blockchain-so-interesting"
+}
+
   return (
-    <Card prev={undefined} next={undefined}>
+    <Card prev={prev} next={next}>
       <h3  className="mb-[2rem] font-semibold text-[2.5rem]">How The Blockchain Uses Cryptography</h3>
       <p>
         The Blockchain uses cryptographic algorithms to encrypt and decrypt
