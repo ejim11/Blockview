@@ -41,7 +41,7 @@ const BlockchainArchitecture = () => {
     }
 
     const next = {
-        path: "understanding-the-blockchain-technology-using-bitcoin-and-ethereum"
+        path: "understanding-the-blockchain-using-bitcoin-and-ethereum"
     }
 
 

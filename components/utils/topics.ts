@@ -24,12 +24,12 @@ const topics = [
         route: "the-architecture-of-the-blockchain",
       },
       {
-        title: "Understanding the blockchain technology using Bitcoin and Ethereum",
-        route: "understanding-the-blockchain-technology-using-bitcoin-and-ethereum",
+        title: "Understanding the blockchain using Bitcoin and Ethereum",
+        route: "understanding-the-blockchain-using-bitcoin-and-ethereum",
       },
       {
-        title: "Attacks on the system",
-        route: "attacks-on-the-system",
+        title: "Attacks on the Network",
+        route: "attacks-on-the-network",
       },
       ,
     ],
