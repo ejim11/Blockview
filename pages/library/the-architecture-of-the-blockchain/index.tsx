@@ -75,10 +75,10 @@ const BlockchainArchitecture = () => {
                  <p>
                  A copy of the ledger(The Blockchain) is stored on multiple nodes(Computers) of a cryptographically secured P2P network. In order to change the ledger data on all copies of the ledger throughout the whole network, the network nodes(computers) need to reach a mutual agreement about such a change. 
                  </p>
+                 <p>This process is referred to as "consensus." and will be  discussed in details in the next chapter using Bitcoin and Ethereum.</p>
                  <p className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue"> 
                  The Blockchain is a shared, trusted, public ledger of transactions that everyone can inspect, but which no single user controls. Each independent node has the latest version of the ledger, which contains all transactions that have ever been made, and can verify transactions.
-                 </p>
-                 <p>This process is referred to as "consensus." and will be  discussed in details in the next chapter using Bitcoin and Ethereum.</p>
+                 </p>   
         </Card>
 
     )
