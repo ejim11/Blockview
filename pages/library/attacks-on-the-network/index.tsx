@@ -23,7 +23,7 @@ const NetworkAttacks = () => {
                 <h3 className="mt-[2rem] mb-[1rem] font-semibold text-[2rem]">Thought Experiment</h3>
                 <p className="mt-[2rem] mb-[1rem] font-semibold text-[1.8rem]">51% Attack: </p>
                 <p> A Proof-of-Work network
-                    is safe as long as more than 50 percent of the work is being put in by miners who are honest. A "51% attack" happens when a single person or institution is able to control the majority of the hash rate or computing power to manipulate the network. In the fifteen-year history of Bitcoin, no manipulation by outside attackers has been successful.</p>
+                    is safe as long as more than 50 percent of the work is being put in by miners who are honest. A "51% attack" happens when a single person or institution is able to control the majority of the hash rate or computing power to manipulate the network. In the fifteen-year history of Bitcoin, no manipulation by attackers has been successful.</p>
                 <p>
                     A successful 51 percent attack could have the following impact: It would allow you to</p>
                 <ul className='capitalize list-disc pl-[2rem] mt-[1rem]'>

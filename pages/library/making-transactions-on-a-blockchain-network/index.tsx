@@ -41,7 +41,7 @@ const Transactions = () => {
             <p className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">
                 View your personal transactions on the ethereum network in the explorer page by copying your transaction hash and pasting it into the input field and submitting.
             </p>
-            <p className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">Running transactions, calling contracts, signing messages, etc are all operations that are run on the ethereum network. These operations require different amount computational power depending on the computational stress of the operation on the blockchain. The cost for the computational stress on the blockchain by operation is measured in a unit called <span className='text-color-light-blue'>Gas</span>. </p>
+            <p className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">Running transactions, calling contracts, signing messages, etc are all operations that are run on the ethereum network. These operations require different amount computational power depending on the computational stress of the operation on the blockchain. The cost for the computational stress on the blockchain by an operation is measured in a unit called <span className='text-color-light-blue'>Gas</span>. </p>
             <p>After making the transaction, You and everyone on the ethereum network have access to the transaction and its details. We will explain all details of the transaction below: </p>
             <ul className='mt-[2rem]'>
                 {

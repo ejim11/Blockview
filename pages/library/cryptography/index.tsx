@@ -17,6 +17,7 @@ const next = {
 
   return (
     <Card prev={prev} next={next}>
+            <h3 className=" mb-[2rem] font-semibold text-[2.5rem]">Cryptography</h3>
        <p>
         Historically, up until the 1970s, cryptography was the study of
         encrypting messages so that they could not be decrypted even if
