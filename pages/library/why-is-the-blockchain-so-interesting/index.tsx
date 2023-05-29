@@ -7,7 +7,15 @@ import noRespend from "../../../public/assets/NoRespend.png"
 import Image from "next/image";
 
 const WhyTheBlockchainIsInteresting = () => {
-  return <Card prev={undefined} next={undefined}>
+const prev = {
+  path: "how-the-blockchain-uses-cryptography"
+}
+
+const next = {
+  path: "the-architecture-of-the-blockchain"
+}
+
+  return <Card prev={prev} next={next}>
     <h3 className="mb-[2rem] font-semibold text-[2.5rem] text-color-dark-blue capitalize">Why is the blockchain so interesting?</h3>
     <p>
       Blockchain networks build on the idea of P2P networks, providing a universal data set that every actor can trust, even though they might not know or trust each other. Immutable copies of that data are stored and managed on every node in the network. 
