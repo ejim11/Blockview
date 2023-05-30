@@ -7,18 +7,18 @@ import AsymmetricImg2 from "../../../public/assets/asymmetric2.png"
 
 const Cryptography = () => {
 
-const prev = {
-  path: "the-web3-revolution"
-}
+  const prev = {
+    path: "the-web3-revolution"
+  }
 
-const next = {
-  path: "how-the-blockchain-uses-cryptography"
-}
+  const next = {
+    path: "how-the-blockchain-uses-cryptography"
+  }
 
   return (
     <Card prev={prev} next={next}>
-            <h3 className=" mb-[2rem] font-semibold text-[2.5rem]">Cryptography</h3>
-       <p>
+      <h3 className=" mb-[2rem] font-semibold text-[2.5rem]">Cryptography</h3>
+      <p>
         Historically, up until the 1970s, cryptography was the study of
         encrypting messages so that they could not be decrypted even if
         intercepted. Cryptography was used for passing important secrets,
@@ -83,11 +83,11 @@ const next = {
           of a doubt that only Bob could have written this message. The only key
           that could have encrypted the message is the corresponding private key
           which only Bob has access to. In practice, this would create an
-          unforgeable digital signature for Bob. 
+          unforgeable digital signature for Bob.
         </p>
         <Image src={AsymmetricImg1} alt="web history" className="w-[70%] my-[4rem] mx-auto" />
         <p>
-        On the flip side, what if a
+          On the flip side, what if a
           message was encrypted using Bob's public key? Of course, anyone can do
           this since Bob's public key is available to everyone. The benefit comes
           in that only Bob can decrypt the message. In this way, a friend of Bob's
