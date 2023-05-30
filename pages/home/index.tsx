@@ -5,6 +5,7 @@ import { useAppDispatch } from "../../hooks/customHooks";
 import { libraryAction } from "../../slices/librarySlice";
 import homeData from "../../components/utils/homeData";
 import Link from "next/link";
+import bg from "../../public/assets/blockchainHome.jpeg"
 
 export default function Home() {
   const dispatchFn = useAppDispatch();
@@ -40,7 +41,9 @@ export default function Home() {
       </Head>
       <div className="flex flex-col">
       <main className="flex w-full flex-col">
-        <section  className="home   h-screen text-color-white flex flex-col items-center justify-center text-center px-8 sm:px5">
+        <section style={{
+      backgroundImage: `linear-gradient(#06283db3, #1365df74), url(${bg.src})`,
+    }} className="home   h-screen text-color-white flex flex-col items-center justify-center text-center px-8 sm:px5">
           <h1 className="text-[5.5rem] sm:text-4xl">
             The Future of Finance: The Blockchain
           </h1>
