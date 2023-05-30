@@ -45,7 +45,7 @@ const LibraryNavBar = () => {
                 navIndex === topic.number
                   ? " border-color-light-blue text-color-light-blue"
                   : " border-color-dark-blue text-color-dark-blue"
-              }  text-xl cursor-pointer`}
+              }  cursor-pointer`}
               onClick={() => {
                 const index: any = topic.number;
                 setDisplaymodal(true);
