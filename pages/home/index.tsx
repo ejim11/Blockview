@@ -43,6 +43,10 @@ export default function Home() {
       <main className="flex w-full flex-col">
         <section style={{
       backgroundImage: `linear-gradient(#06283db3, #1365df74), url(${bg.src})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundAttachment: "fixed"
     }} className="home   h-screen text-color-white flex flex-col items-center justify-center text-center px-8 sm:px5">
           <h1 className="text-[5.5rem] sm:text-[3.5rem]">
             The Future of Finance: The Blockchain
