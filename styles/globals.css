@@ -37,8 +37,12 @@ input {
   font-size: 16px !important;
 }
 
-.home{
-  background-image:  url('../public/assets/blockchainHome.jpeg') ;
+.home {
+  background-image: linear-gradient(#06283db3, #1365df74), url('../public/assets/blockchainHome.jpeg');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* @media (prefers-color-scheme: dark) {
