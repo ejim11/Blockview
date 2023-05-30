@@ -63,7 +63,7 @@ const TransactionDetails = ({fetchedData}: any) => {
             details.map((item, index) => (
                             <li key={index} className='flex items-center mb-[1rem]'>
                                 <p className='font-semibold capitalize text-[2rem] mr-[1rem]'>{item.title}:</p>
-                                <p>{item.value}</p>
+                                <p className='sm:break-all text-center'>{item.value}</p>
                             </li>
                         ))
         }

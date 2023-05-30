@@ -24,7 +24,7 @@ const next = {
      <p>
       Cryptography is also used the storage of transactions on the blockchain. In the next chapter on architecture of the blockchain, we will elucidate on how the blockchain stores transactions using cryptographic algorithms.
      </p>
-     <Image src={CryptographictxImg} alt = "crypttx" className="w-[70%] my-[4rem] mx-auto" />
+     <Image src={CryptographictxImg} alt = "crypttx" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
     </Card>
   );
 };

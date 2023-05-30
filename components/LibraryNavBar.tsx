@@ -35,7 +35,7 @@ const LibraryNavBar = () => {
       className="flex mt-[8rem]
     "
     >
-      <nav className="w-[8rem] sm:w-[4.5rem]  border-r border-color-border h-[calc(100vh-8rem)] ">
+      <nav className="w-[8rem] sm:w-[7rem]  border-r border-color-border h-[calc(100vh-8rem)] ">
         <ul className="flex flex-col items-center pt-5">
           {topics.map((topic, i) => (
             <li

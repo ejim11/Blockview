@@ -33,7 +33,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         
         {!displayNav && (
           <RiMenu3Fill
-            className="hidden sm:block ml-auto w-6 h-6"
+            className="hidden sm:block ml-auto w-[2.5rem] h-[2.5rem]"
             onClick={toggleNavDisplay}
           />
         )}
@@ -68,7 +68,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             ))}
           </ul>
           <RxCross1
-            className="hidden sm:block ml-auto w-6 h-6 mt-4 mr-4"
+            className="hidden sm:block ml-auto w-[2.5rem] h-[2.5rem] mt-4 mr-4"
             onClick={toggleNavDisplay}
           />
         </nav>

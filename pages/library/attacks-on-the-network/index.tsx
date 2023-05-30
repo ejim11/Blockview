@@ -39,7 +39,7 @@ const NetworkAttacks = () => {
                     <li>sending someone's tokens without their approval</li>
                 </ul>
                 <p> This is because all transactions need to be signed with the private key of the token owner, which cannot be revealed by majority agreement of the network. Changing a detail in an existing transaction would render the ledger "Illegitimate," as a transaction without a valid signature would be in it.</p>
-                <Image src={networkAttackImg} alt="network attack" className="w-[70%] my-[4rem] mx-auto" />
+                <Image src={networkAttackImg} alt="network attack" className="w-[70%] md:w-[80%] sm:w-[95%] my-[4rem] mx-auto" />
             </div>
         </Card>
     )

@@ -38,7 +38,7 @@ const Cryptography = () => {
         mentioned above) could be used together to create a more secure
         encryption. Having keys on both sides of the message is considered
         symmetric-key cryptography.</p>
-      <Image src={symmetricImg} alt="web history" className="w-[70%] my-[4rem] mx-auto" />
+      <Image src={symmetricImg} alt="web history" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
       <p className="my-[3rem]">
         As mentioned above, the state of the art cryptography had been
         increasingly complex versions of symmetric-key cryptography. The
@@ -85,7 +85,7 @@ const Cryptography = () => {
           which only Bob has access to. In practice, this would create an
           unforgeable digital signature for Bob.
         </p>
-        <Image src={AsymmetricImg1} alt="web history" className="w-[70%] my-[4rem] mx-auto" />
+        <Image src={AsymmetricImg1} alt="web history" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
         <p>
           On the flip side, what if a
           message was encrypted using Bob's public key? Of course, anyone can do
@@ -100,7 +100,7 @@ const Cryptography = () => {
           have a mathematical function with these properties! Diffie would work
           with both Martin Hellman and Ralph Merkle in search of such a system.
         </p>
-        <Image src={AsymmetricImg2} alt="web history" className="w-[70%] my-[4rem] mx-auto" />
+        <Image src={AsymmetricImg2} alt="web history" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
 
       </div>
 

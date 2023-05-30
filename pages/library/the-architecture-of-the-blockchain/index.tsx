@@ -70,7 +70,7 @@ const BlockchainArchitecture = () => {
                 The ledger is a file that maintains a growing list of transaction records, chained in blocks that are cryptographically secured from tampering and revision. If manipulation attempts
                 were made, the hash value of the manipulated ledger would not coincide with the hash value recorded on the copies of the ledger on all other nodes. The hash value of a block therefore serves as a counterfeit protection that can be used to check the authenticity of a transaction on the blockchain.
                  </p>
-                 <Image src={blockschainImg} alt = "double spending" className="w-[70%] my-[4rem] mx-auto" />
+                 <Image src={blockschainImg} alt = "double spending" className="w-[70%] md:w-[80%] sm:w-[95%]   my-[4rem] mx-auto" />
 
                  <p>
                  A copy of the ledger(The Blockchain) is stored on multiple nodes(Computers) of a cryptographically secured P2P network. In order to change the ledger data on all copies of the ledger throughout the whole network, the network nodes(computers) need to reach a mutual agreement about such a change. 

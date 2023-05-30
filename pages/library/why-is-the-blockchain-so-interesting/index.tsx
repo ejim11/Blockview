@@ -26,12 +26,12 @@ const next = {
   <p className="my-[1rem]">
        This new form of distributed data management resolved the double-spending problem over the Internet. The way the Internet is designed today, one can spend the same value issued as a digital file multiple times, because digital information can be copied, and copies of that same digital file can be sent from one computer to multiple other computers at the same time.
   </p>
-  <Image src={doubleSpendingImg} alt = "double spending" className="w-[70%] my-[4rem] mx-auto" />
+  <Image src={doubleSpendingImg} alt = "double spending" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
   <p>
   The Bitcoin protocol introduced a mechanism of making it expensive to copy digital values by recording transactions in batches of data called "blocks" that are "hashed" with a key. This cryptographic hash creates a digital
       fingerprint of the block of transactions. Each block has a nonce and includes the hash of the prior block, thereby linking one block with another into a chain of blocks. This process guarantees the historic integrity of all the blocks back to the first block, thereby preventing the re-spending of a transaction from a hacker or malicious user in the network. 
   </p>
-  <Image src={noRespend} alt = "double spending" className="w-[70%] my-[4rem] mx-auto" />
+  <Image src={noRespend} alt = "double spending" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
     </div>
    
 

@@ -66,7 +66,7 @@ const ResourceLibrary = () => {
       </p>
       <ul >{topicsList}</ul>
       <p>
-        Most of the information in the library is gotten from a book on tokens by Shermin Voshmgir. You can purchase it at <a href="https://www.amazon.com/Token-Economy-Web3-reinvents-Internet/dp/3982103819/ref=sr_1_1?crid=C28NZ3X659XQ&keywords=token+economy&qid=1685391333&sprefix=token+economy%2Caps%2C458&sr=8-1" className="text-color-light-blue" target="blank">Token Economy: How the Web3 reinvents the Internet (Token Economy: How the Web3 reinvents the internet</a> for a deeper understanding.
+        Most of the information in the library is gotten from a book on tokens by Shermin Voshmgir. You can purchase it at <a href="https://www.amazon.com/Token-Economy-Web3-reinvents-Internet/dp/3982103819/ref=sr_1_1?crid=C28NZ3X659XQ&keywords=token+economy&qid=1685391333&sprefix=token+economy%2Caps%2C458&sr=8-1" className="text-color-light-blue" target="blank">Token Economy: How the Web3 reinvents the Internet (Token Economy: How the Web3 reinvents the internet)</a> for a deeper understanding.
       </p>
     </Card>
   );

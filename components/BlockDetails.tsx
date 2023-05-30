@@ -29,9 +29,6 @@ const  details = [
         value: fetchedData.hash
     },
     {
-        title: 'Miner',
-        value: fetchedData.miner
-    },{
         title: 'Nonce',
         value: fetchedData.nonce
     },
@@ -54,17 +51,16 @@ const  details = [
 ]
 
   return (
-    <ul className='mt-[2rem] rounded-lg border p-[2rem] bg-color-dark-blue text-color-white'>
+    <ul className='mt-[2rem]   rounded-lg border p-[2rem] bg-color-dark-blue text-color-white'>
         {
             details.map((item, index) => (
-                            <li key={index} className='flex items-center mb-[1rem]'>
+                            <li key={index} className='flex items-center mb-[1rem] sm:flex-col sm:flex-wrap'>
                                 <p className='font-semibold capitalize text-[2rem] mr-[1rem]'>{item.title}:</p>
-                                <p>{item.value}</p>
+                                <p className='sm:break-all text-center'>{String(item.value)}</p>
                             </li>
                         ))
         }
     </ul>
   )
 }
-
 export default BlockDetails

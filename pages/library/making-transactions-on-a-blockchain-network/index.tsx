@@ -22,6 +22,8 @@ const Transactions = () => {
         path: "how-are-transactions-validated"
     }
 
+const imgClassName = "w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto"
+
     return (
         <Card prev={prev} next={next}>
             <h3 className="mb-[2rem] font-semibold text-[2.5rem]">Making Transactions On The Ethereum Network</h3>
@@ -33,12 +35,12 @@ const Transactions = () => {
                 It's very important to remember always that you shouldn't share your secret recovery phrase or private key with anyone or organization.
             </p>
             <p>Below we will make a transaction to another account. We will transfer 300 FST Tokens from account 1 to account 2.</p>
-            <Image src={metamask1Img} alt="metamask" className="w-[70%] my-[4rem] mx-auto" />
-            <Image src={transferBtwAcc} alt="metamask2" className="w-[70%] my-[4rem] mx-auto" />
-            <Image src={metamask3Img} alt="metamask3" className="w-[70%] my-[4rem] mx-auto" />
-            <Image src={metamask4Img} alt="metamask4" className="w-[70%] my-[4rem] mx-auto" />
-            <Image src={metamask5Img} alt="metamask5" className="w-[70%] my-[4rem] mx-auto" />
-            <Image src={metamask6Img} alt="metamask6" className="w-[70%] my-[4rem] mx-auto" />
+            <Image src={metamask1Img} alt="metamask" className= {imgClassName} />
+            <Image src={transferBtwAcc} alt="metamask2" className= {imgClassName} />
+            <Image src={metamask3Img} alt="metamask3" className= {imgClassName} />
+            <Image src={metamask4Img} alt="metamask4" className= {imgClassName} />
+            <Image src={metamask5Img} alt="metamask5" className= {imgClassName} />
+            <Image src={metamask6Img} alt="metamask6" className= {imgClassName} />
             <p className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">
                 View your personal transactions on the ethereum network in the <Link href={"/explorer"} className='text-color-light-blue capitalize'>explorer</Link> page by copying your transaction hash and pasting it into the input field and submitting.
             </p>

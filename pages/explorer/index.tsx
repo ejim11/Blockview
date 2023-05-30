@@ -48,7 +48,7 @@ const Explorer = () => {
     }
   }, [copied]);
 
-  return <section className=" mt-[8rem] w-full p-[5rem] sm:px-4 sm:py-3">
+  return <section className=" mt-[8rem] w-full p-[5rem] sm:p-[2rem]">
     <div className=" w-full text-[1.7rem] bg-color-white border border-color-border rounded-lg p-[3rem] sm:border-0 sm:p-0">
       <h3 className="text-[2.5rem] text-color-dark-blue mb-[2rem]">The Explorer</h3>
       <p>

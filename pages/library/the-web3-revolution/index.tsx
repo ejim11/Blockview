@@ -25,7 +25,7 @@ const Web2AndWeb3 = () => {
         is represented by a series of blockchain networks or similar distributed
         ledgers.
       </p>
-     <Image src={webHistory} alt = "web history" className="w-[70%] my-[4rem] mx-auto" />
+     <Image src={webHistory} alt = "web history" className="w-[70%] md:w-[80%] sm:w-[95%] my-[4rem] mx-auto" />
       <p>
         The Internet we have today is broken. We do not control our data, nor do
         we have a native value settlement layer.  Our data architectures are still based on the concept
@@ -40,7 +40,7 @@ const Web2AndWeb3 = () => {
         also produce many inefficiencies along the supply chain of goods and
         services.
       </p>
-      <Image src={centralizedImg} alt = "web history" className="w-[50%] h-[40rem] my-[4rem] mx-auto" />
+      <Image src={centralizedImg} alt = "web history" className="w-[50%] md:w-[80%] sm:w-[95%]  h-[40rem] my-[4rem] mx-auto" />
       <p className="text-[2rem] text-center font-semibold mt-[2rem] mb-[4rem]">Data Monopoly (Single Point Of Failure)</p>
       <p className="my-[2rem]">
         The emergence of the WWW in the early 1990s increased the usability of
@@ -66,7 +66,7 @@ const Web2AndWeb3 = () => {
         absence of intermediaries. It enables true P2P transactions, and it all
         started with tie emergence of Bitcoin.
       </p>
-      <Image src={decentralizedImg} alt = "web history" className="w-[50%] h-[40rem] my-[4rem] mx-auto" />
+      <Image src={decentralizedImg} alt = "web history" className="w-[50%] md:w-[80%] sm:w-[95%]  h-[40rem] my-[4rem] mx-auto" />
       <p className="text-[2rem] text-center font-semibold mt-[2rem] mb-[4rem]">Data Sovereignity (No Single Point Of Failure)</p>
       <p>
          Data is collaboratively

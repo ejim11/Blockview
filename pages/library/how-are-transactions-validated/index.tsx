@@ -24,7 +24,7 @@ const TransactionValidation = () => {
             <p>
                 After the block containing the transaction is added to the Ethereum network(ethereum chain), the transaction is said to be completed.
             </p>
-            <Image src={transactionValImg} alt="web history" className="w-[70%] my-[4rem] mx-auto" />
+            <Image src={transactionValImg} alt="web history" className="w-[70%] md:w-[80%] sm:w-[95%] my-[4rem] mx-auto" />
         </Card>
     )
 }

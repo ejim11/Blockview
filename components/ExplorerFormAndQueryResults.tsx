@@ -92,16 +92,16 @@ const ExplorerFormAndQueryResults = () => {
   
   return (
     <div className='w-full'>
-      <div className='w-max border rounded-lg px-[2rem] py-[1rem]'>
-        <select name="query" id="query" className='border-0 outline-none ring-0' onChange={queryNameChangeHandler}>
+      <div className='w-max  sm:w-full border rounded-lg px-[2rem] py-[1rem]'>
+        <select name="query" id="query" className='border-0 outline-none ring-0 sm:w-full' onChange={queryNameChangeHandler}>
           <option value="get-block">Get Block Details</option>
           <option value="get-transaction">Get Transaction Details</option>
         </select>
       </div>
 
-      <form className='flex mt-[3rem]' onSubmit={submitFormhandler}>
-        <input type="text" value={input} onChange={inputChangeHandler} placeholder={`${queryName === "get-block" ? "Input Block Number or Hash" : "Input Transaction Hash"}`} className='border rounded-lg px-[2rem] py-[1rem] w-[70%]' />
-        <button type="submit" className='bg-color-dark-blue text-color-white rounded-lg ml-[2rem] px-[3rem]'>Submit</button>
+      <form className='flex mt-[3rem] md:w-full sm:flex-col' onSubmit={submitFormhandler}>
+        <input type="text" value={input} onChange={inputChangeHandler} placeholder={`${queryName === "get-block" ? "Input Block Number or Hash" : "Input Transaction Hash"}`} className='border rounded-lg px-[2rem] py-[1rem] w-[70%] md:flex-1 sm:w-full' />
+        <button type="submit" className='bg-color-dark-blue text-color-white rounded-lg ml-[2rem] px-[3rem] sm:ml-0 sm:mt-[1.5rem] sm:py-[1rem]'>Submit</button>
       </form>
       {fetchedBlockData && !loading  && <div>
         <BlockDetails fetchedData = {fetchedBlockData} />

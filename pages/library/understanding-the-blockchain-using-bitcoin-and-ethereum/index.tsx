@@ -34,7 +34,7 @@ const UnderstandingBlockchain = () => {
             <div className="bg-[#f1f3f5] p-[2rem] rounded-lg mt-[2rem] mb-[4rem]">
                 <h3 className="mt-[2rem] mb-[1rem] font-semibold text-[1.8rem]">Thought Experiment</h3>
                 <p className='my-[1rem]'>Let's assume there is a dispute on the Bitcoin network between two nodes(computers). The network will choose the node with the longest chain of blocks as the correct block. This is because that node has more amount of verified history of the Bitcoin network than the other and as such can be trusted to  give the correct state of the blockchain.</p>
-                <Image src={nakamotoConImg} alt="nakamoto" className="w-[70%] my-[4rem] mx-auto" />
+                <Image src={nakamotoConImg} alt="nakamoto" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
             </div>
             <p >
                 The Proof-of-work is a mechanism for agreement used by the Bitcoin network to determine which node(computer) solved the hash problem first and mined the most recent block of transactions. To find a valid hash, we need to find a nonce value that will produce a valid hash when used with the rest of the information from that block.
@@ -58,7 +58,7 @@ const UnderstandingBlockchain = () => {
                 <p>
                     To give an example: In Bitcoin's genesis block, Frank sent Halley 10 BTC. Manipulating this value from 10 BTC to 20 BTC (Maybe Halley wants some more BTC!) would require IMMENSE computational power as halley will need to rehash other blocks, recall that more blocks are still being mined so halley will need to also hash the current blocks mined.
                 </p>
-                <Image src={dataIntImg} alt="nakamoto" className="w-[70%] my-[4rem] mx-auto" />
+                <Image src={dataIntImg} alt="nakamoto" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
             </div>
             <h3 className=" mt-[2rem]  mb-[1rem] font-semibold text-[2rem] text-color-dark-blue capitalize">consensus on the ethereum network</h3>
             <p>The Ethereum network makes use of a Proof-of-Stake based mechanism to reach consensus on the state of their blockchain network.
@@ -69,8 +69,8 @@ const UnderstandingBlockchain = () => {
             <p>
                 In Proof-of-Stake, there is no need for mining or computational work as the network chooses which network participant gets to validate a block based on the proof of staked network tokens. 
             </p>
-            <p className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">On the Ethereum network, 32ETH Tokens must be staked before becoming a validator on the network.</p>
-            <Image src={stakedImg} alt="staked" className="w-[70%] my-[4rem] mx-auto" />
+            <p className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">On the Ethereum network, about 32ETH Tokens must be staked before becoming a validator on the network.</p>
+            <Image src={stakedImg} alt="staked" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
         </Card>
     )
 }
