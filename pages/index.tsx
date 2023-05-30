@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
+
 const HomeLoader = () => {
   const router = useRouter();
 
@@ -8,7 +9,8 @@ const HomeLoader = () => {
     router.push("/home");
   });
 
-  return <></>;
+  return <>
+  </>;
 };
 
 export default HomeLoader;

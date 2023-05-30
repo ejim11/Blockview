@@ -46,3 +46,18 @@ input {
     color-scheme: dark;
   }
 } */
+
+/* toastify */
+
+@media only screen and (max-width: 650px) {
+  .Toastify__toast-container {
+    width: 90% !important;
+    margin: 2rem auto !important;
+    right: 0 !important;
+  }
+}
+
+.Toastify__toast--success,
+.Toastify__toast--error {
+  font-size: 1.7rem;
+}
