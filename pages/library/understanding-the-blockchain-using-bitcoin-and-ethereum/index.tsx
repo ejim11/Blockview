@@ -31,7 +31,7 @@ const UnderstandingBlockchain = () => {
             <p>
                 The Nakamoto consensus couples a Sybil protection mechanism of Proof-of-Work with the longest-chain rule, a novel consensus invented by Satoshi Nakamoto for Bitcoin in 2008. This means the node(computer) with the longest chain of blocks is the most correct and detailed node and thus network actors will choose it as the correct node(computer) in any dispute.
             </p>
-            <div className="bg-[#f1f3f5] p-[2rem] rounded-lg mt-[2rem] mb-[4rem]">
+            <div className="bg-[#f1f3f5] p-[2rem] rounded-lg mt-[2rem] sm:p-[1rem] mb-[4rem]">
                 <h3 className="mt-[2rem] mb-[1rem] font-semibold text-[1.8rem]">Thought Experiment</h3>
                 <p className='my-[1rem]'>Let's assume there is a dispute on the Bitcoin network between two nodes(computers). The network will choose the node with the longest chain of blocks as the correct block. This is because that node has more amount of verified history of the Bitcoin network than the other and as such can be trusted to  give the correct state of the blockchain.</p>
                 <Image src={nakamotoConImg} alt="nakamoto" className="w-[70%] md:w-[80%] sm:w-[95%]  my-[4rem] mx-auto" />
