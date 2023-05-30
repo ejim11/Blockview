@@ -13,7 +13,7 @@ module.exports = {
       "color-light-blue": "#1363DF",
       "color-bg-transparent": "rgba(20, 66, 114, 0.11)",
       "color-border": "#BDBDBD",
-
+      
       // "text-p-color": "#333333",
       // "color-red": "rgb(220 38 38)",
       "color-white": "#fff",

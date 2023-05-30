@@ -93,7 +93,7 @@ const ExplorerFormAndQueryResults = () => {
   return (
     <div className='w-full'>
       <div className='w-max  sm:w-full border rounded-lg px-[2rem] py-[1rem]'>
-        <select name="query" id="query" className='border-0 outline-none ring-0 sm:w-full' onChange={queryNameChangeHandler}>
+        <select name="query" id="query" className='border-0 outline-none ring-0 sm:w-full bg-color-white' onChange={queryNameChangeHandler}>
           <option value="get-block">Get Block Details</option>
           <option value="get-transaction">Get Transaction Details</option>
         </select>
