@@ -53,7 +53,7 @@ const UnderstandingBlockchain = () => {
                 The next parts of the section touch on how difficult it is to manipulate data in a block that already has many blocks mined on top of it.
                 Since data is an input variable for the hash of each block, changing the data will change that block's hash. The new hash will not have three leading zeros, and therefore becomes invalid. Manipulating data in a block that has been nested deeply in the chain is a fool's errand.
             </p>
-            <div className="bg-[#f1f3f5] p-[2rem] rounded-lg mt-[2rem] mb-[4rem]">
+            <div className="bg-[#f1f3f5] p-[2rem] rounded-lg mt-[2rem] sm:p-[1rem]   mb-[4rem]">
                 <h3 className="mt-[2rem] mb-[1rem] font-semibold text-[1.8rem]">Thought Experiment</h3>
                 <p>
                     To give an example: In Bitcoin's genesis block, Frank sent Halley 10 BTC. Manipulating this value from 10 BTC to 20 BTC (Maybe Halley wants some more BTC!) would require IMMENSE computational power as halley will need to rehash other blocks, recall that more blocks are still being mined so halley will need to also hash the current blocks mined.

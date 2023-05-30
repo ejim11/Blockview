@@ -23,7 +23,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="sm:relative w-screen ">
-      <header className="flex items-center h-[8rem] px-[3rem] fixed top-0 left-0 w-full bg-color-white border-b border-color-border">
+      <header className="flex items-center h-[8rem] sm:h-[7rem] px-[3rem] sm:px-[2rem] fixed top-0 left-0 w-full bg-color-white border-b border-color-border">
         <Link href={"/home"} className="flex items-center">
         <FaUncharted className="text-color-dark-blue mr-2 w-[2.5rem] h-[2.5rem]" />
         <p className="text-color-dark-blue text-[2.5rem] font-bold tracking-wide">

@@ -39,7 +39,7 @@ const TopicListModal = ({
 
   return (
     <div
-      className={`h-[calc(100vh-8rem)] left-[8rem] sm:left-[7rem] text-[1.8rem] z-5 top-[8rem] w-[calc(100vw-6rem)] sm:w-[calc(100vw-7rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
+      className={`h-[calc(100vh-8rem)] sm:h-[calc(100vh-7rem)] left-[8rem] sm:left-[7rem] text-[1.8rem] z-5 top-[8rem] w-[calc(100vw-6rem)] sm:w-[calc(100vw-7rem)] absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear ${
         display ? "opacity-1 visible" : "opacity-0 invisible"
       }`}
       data-close={"close-modal"}

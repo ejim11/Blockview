@@ -6,7 +6,7 @@ interface PageNavButtons{
 
 const Card: React.FC<{ children: React.ReactNode, prev : PageNavButtons | undefined , next : PageNavButtons |  undefined }> = ({ children, prev, next }) => {
   return (
-    <section className=" w-[calc(100vw-8rem)] sm:w-[calc(100vw-4.5rem)]  mt-[8rem] h-[calc(100vh-8rem)] overflow-y-auto  p-[5rem] md:p-[3rem] sm:p-[2rem]">
+    <section className=" w-[calc(100vw-8rem)] sm:w-[calc(100vw-4.5rem)]  mt-[8rem] sm:mt-[7rem] h-[calc(100vh-8rem)] sm:h-[calc(100vh-7rem)] overflow-y-auto  p-[5rem] md:p-[3rem] sm:p-[1rem]">
       <div className=" w-full text-[1.7rem] bg-color-white border border-color-border rounded-lg p-[3rem] sm:border-0 sm:p-0">
         {children}
       </div>

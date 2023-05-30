@@ -20,7 +20,7 @@ const next = {
     <p>
       Blockchain networks build on the idea of P2P networks, providing a universal data set that every actor can trust, even though they might not know or trust each other. Immutable copies of that data are stored and managed on every node in the network. 
     </p>
-    <div className="bg-[#f1f3f5] p-[2rem] rounded-lg mt-[2rem]">
+    <div className="bg-[#f1f3f5] p-[2rem] sm:p-[1rem] rounded-lg mt-[2rem]">
     <h3 className="mt-[2rem] mb-[1rem] font-semibold text-[1.8rem]">Thought Experiment</h3>
     <p className="capitalize font-semibold text-color-dark-blue text-[2rem] mt-[3rem] ">Double-Spending Problem:</p>
   <p className="my-[1rem]">

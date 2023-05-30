@@ -19,7 +19,7 @@ const NetworkAttacks = () => {
             <p>
                 All entries on the blockchain are read-only. Once a block of transactions is accepted by the network, it cannot be easily changed or removed. All blocks would have to be recomputed for that to happen, which would require the majority of the network participants to agree over such changes. An attacker would need to redo the computational work of all successor blocks, on the majority of the network nodes. This would require control over, or bribing of, the majority of the network nodes. Even if it would be possible to perform these computations within the block-creation period, the cost would be much higher than the rewards for attacking the network. While manipulation is possible, the mechanism is designed to make it infeasible.
             </p>
-            <div className="bg-[#f1f3f5] p-[2rem] rounded-lg mt-[2rem]">
+            <div className="bg-[#f1f3f5] p-[2rem] rounded-lg sm:p-[1rem] mt-[2rem]">
                 <h3 className="mt-[2rem] mb-[1rem] font-semibold text-[2rem]">Thought Experiment</h3>
                 <p className="mt-[2rem] mb-[1rem] font-semibold text-[1.8rem]">51% Attack: </p>
                 <p> A Proof-of-Work network

@@ -62,7 +62,7 @@ const Cryptography = () => {
         private! As it turns out, a public key introduces some extremely
         important cryptographic properties!
       </p>
-      <div className="bg-[#f1f3f5] p-[2rem] rounded-lg mt-[2rem]">
+      <div className="bg-[#f1f3f5] p-[2rem] sm:p-[1rem] rounded-lg mt-[2rem]">
         <h3 className="mt-[2rem] mb-[1rem] font-semibold text-[1.8rem]">Thought Experiment</h3>
         <p>
           Take a minute to walk through this
