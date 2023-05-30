@@ -5,7 +5,7 @@ import BlockDetails from './BlockDetails';
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import TransactionDetails from './TransactionDetails';
-import { toastError } from './utils/toastFunctions';
+import { toastError } from './toastFunctions';
 
 
 const ExplorerFormAndQueryResults = () => {
