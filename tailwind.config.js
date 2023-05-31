@@ -13,10 +13,10 @@ module.exports = {
       "color-light-blue": "#1363DF",
       "color-bg-transparent": "rgba(20, 66, 114, 0.11)",
       "color-border": "#BDBDBD",
-      
+      "color-white": "#fff",
       // "text-p-color": "#333333",
       // "color-red": "rgb(220 38 38)",
-      "color-white": "#fff",
+     
       // "color-btn": "#2F80ED",
       // "color-black": "#222",
     },
