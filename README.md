@@ -85,13 +85,13 @@ Blockview is a library on Web3 and an explorer for the ethereum network. In bloc
 <!-- USAGE EXAMPLES -->
 ## Usage
 - You can see total topics in the library page and navigate to any section in a topic.
-[![Library1][library-screenshot]](./public/assets/library1.png))
+[![Library1][library-screenshot]](./public/assets/library1.png)
 
 - You can use the library nav bar to navigate to different sections on a topic too.
-[![Library2][library2-screenshot]](./public/assets/library2.png))
+[![Library2][library2-screenshot]](./public/assets/library2.png)
 
 - In the explorer, You can get the latest block number in  the ethereum network and input it to see the details of the block and You can also see details of a transaction by inputting the transaction hash.
-[![Explorer][explorer-screenshot]](./public/assets/explorer.png))
+[![Explorer][explorer-screenshot]](./public/assets/explorer.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,8 +135,7 @@ Project Link: [https://github.com/ejim11/blockview](https://github.com/ejim11/bl
 ## Acknowledgments
 
 * [Alchemy University](https://university.alchemy.com)
-* []()
-* []()
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -149,9 +148,9 @@ Project Link: [https://github.com/ejim11/blockview](https://github.com/ejim11/bl
 [product-screenshot]: ./public/assets/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
-[Typescript]: https://img.shields.io/badge/Typescript-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[Typescript]: https://img.shields.io/badge/Typescript-0769AD?style=for-the-badge&logo=typescript&logoColor=white
 [Typescript-url]: https://www.typescriptlang.org/
-[TailwindCss]: https://img.shields.io/badge/Tailwindcss-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[TailwindCss]: https://img.shields.io/badge/Tailwindcss-0769AD?style=for-the-badge&logo=tailwindcss&logoColor=white
 [TailwindCss-url]: https://tailwindcss.com/
 [library-screenshot]: ./public/assets/library1.png
 [library2-screenshot]: ./public/assets/library2.png
