@@ -47,7 +47,7 @@ export default function Home() {
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundAttachment: "fixed"
-    }} className="home   h-screen text-color-white flex flex-col items-center justify-center text-center px-8 sm:px5">
+    }} className="home home-page-clip   h-screen text-color-white flex flex-col items-center justify-center text-center px-8 sm:px5">
           <h1 className="text-[5.5rem] sm:text-[3.5rem]">
             The Future of Finance: The Blockchain
           </h1>
