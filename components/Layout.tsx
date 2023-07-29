@@ -5,6 +5,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
 import LibraryNavBar from "./LibraryNavBar";
+import {motion} from "framer-motion";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [displayNav, setDisplayNav] = useState(false);
@@ -25,7 +26,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <div className="sm:relative w-screen ">
       <header className="flex items-center h-[8rem] sm:h-[7rem] px-[3rem] sm:px-[2rem] fixed top-0 left-0 w-full bg-color-white border-b border-color-border z-50">
         <Link href={"/home"} className="flex items-center">
-        <FaUncharted className="text-color-dark-blue mr-2 w-[2.5rem] h-[2.5rem]" />
+          <motion.div initial={{rotate: 360}} animate={ {rotate: 0}} transition = {{duration: 2}}>
+            <FaUncharted className="text-color-dark-blue mr-2 w-[2.5rem] h-[2.5rem]" />
+          </motion.div>
+
         <p className="text-color-dark-blue text-[2.5rem] font-bold tracking-wide">
           BLOCKVIEW
         </p>
