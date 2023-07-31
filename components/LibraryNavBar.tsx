@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import topics from "./utils/topics";
-import { useRouter } from "next/router";
+import {NextRouter, useRouter} from "next/router";
 import TopicListModal from "./TopicListModal";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../hooks/customHooks";
 import { libraryAction } from "../slices/librarySlice";
+import {Topic} from "./utils/types";
 
 const LibraryNavBar = () => {
-  const router = useRouter();
+  const router:NextRouter = useRouter();
 
   const topicPath: string = router.asPath.slice(9);
 
-  const chosenTopic = topics.find((topic) => {
+  const chosenTopic: Topic | undefined = topics.find((topic) => {
     const [subTitle] = topic.subTitles.filter(
       (subTitle) => subTitle?.route === topicPath
     );

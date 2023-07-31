@@ -29,7 +29,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <motion.div initial={{rotate: 360}} animate={ {rotate: 0}} transition = {{duration: 1}}>
             <FaUncharted className="text-color-dark-blue mr-2 w-[2.5rem] h-[2.5rem]" />
           </motion.div>
-        <p className=" text-[2.5rem] font-bold tracking-wide logo-animation">
+        <p className=" text-[2.5rem] font-bold tracking-wide logo-animation text-[#06283D]">
           BLOCKVIEW
         </p>
         </Link>
