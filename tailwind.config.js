@@ -37,7 +37,9 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
     extend: {
-      
+      backgroundImage: {
+        "card-header": "url('../public/assets/blockchainHome.jpeg')"
+      }
     },
   },
   plugins: [],
