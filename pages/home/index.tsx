@@ -59,6 +59,7 @@ export default function Home(): JSX.Element {
       </Head>
       <div className="flex flex-col">
       <main className="flex w-full flex-col">
+
         <section style={{
       backgroundImage: `linear-gradient(#06283D, #1365df74), url(${bg.src})`,
       backgroundRepeat: "no-repeat",
