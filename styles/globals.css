@@ -92,14 +92,12 @@ input {
     transform: translateX(0);
     opacity: 1;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
-    color: #06283D;
   }
 
   80% {
     transform: translateX(0);
     opacity: 1;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
-
   }
 
   100% {
@@ -108,6 +106,6 @@ input {
 }
 
 .logo-animation{
-  animation: titleAnimation 4s ease-in;
+  animation: titleAnimation 3s ease-in;
 }
 
