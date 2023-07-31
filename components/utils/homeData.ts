@@ -1,9 +1,11 @@
 import decentralizedImg from "../../public/assets/distNet.jpeg"
 import pubKeyImg from "../../public/assets/pubkey3.jpeg"
 import bkchainImg from "../../public/assets/blockchainHome.jpeg"
+import {HomeData} from "./types";
 
 
-const homeData = [
+
+const homeData: HomeData[] = [
     {
         title: "Security with public key cryptography",
         text: "Public key cryptography is a powerful tool for secure data transmission. We will provide an overview of the basics of public key cryptography and its applications, discuss the different types of public key cryptography, the use of asymmetric encryption algorithms, and the advantages of using it. ",
