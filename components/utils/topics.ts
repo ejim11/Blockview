@@ -1,4 +1,6 @@
-const topics = [
+import {Topic} from "./types";
+
+const topics: Topic[] = [
   {
     number: 1,
     title: "Why The Web3?",

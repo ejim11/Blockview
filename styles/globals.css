@@ -43,13 +43,6 @@ input {
   font-size: 16px !important;
 }
 
-.home {
-  background-color: linear-gradient(#06283db3, #1365df74);
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 /* @media (prefers-color-scheme: dark) {
   html {
@@ -85,3 +78,33 @@ input {
   from { opacity: 0 }
   to { opacity: 1 }
 }
+
+/*animation for text*/
+@keyframes titleAnimation {
+  0% {
+    transform: translateX(-40%);
+    opacity: 0;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  }
+
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
+  }
+
+  80% {
+    transform: translateX(0);
+    opacity: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo-animation{
+  animation: titleAnimation 3s ease-in;
+}
+

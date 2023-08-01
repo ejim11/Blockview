@@ -13,7 +13,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <ToastContainer limit={1} autoClose={2000} />
       </Layout>
-      
     </Provider>
   );
 }
