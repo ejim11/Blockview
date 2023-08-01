@@ -33,7 +33,6 @@ const topics: Topic[] = [
         title: "Attacks on the Network",
         route: "attacks-on-the-network",
       },
-      ,
     ],
   },
   {
