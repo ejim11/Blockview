@@ -8,7 +8,7 @@ interface PageNavButtons{
 
 const Card: React.FC<{ children: React.ReactNode, prev ?: PageNavButtons , next ?: PageNavButtons , title?: string, bgImg?: string  }> = ({ children, prev, next, title, bgImg }) => {
 
-    const containerRef = useRef()
+    const containerRef = useRef(null)
 
     const { scrollYProgress } = useScroll({container: containerRef});
 
