@@ -1,5 +1,5 @@
 import topics from "./utils/topics";
-import {NextRouter, useRouter} from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../hooks/customHooks";
 import { libraryAction } from "../slices/librarySlice";
@@ -21,27 +21,31 @@ const TopicListModal = ({
 
   const topicPath: string = router.asPath.slice(9);
 
-  const topic: any = topics.find((topic: any) => topic.number === Number(index));
+  const topic: any = topics.find(
+    (topic: any) => topic.number === Number(index),
+  );
 
   useEffect((): void => {
     const route: any = localStorage.getItem("item");
     dispatchFn(libraryAction.setSubItem(route));
     // dispatchFn(libraryAction.setNavIndex(topic.number));
-  }, [dispatchFn,subItem]);
+  }, [dispatchFn, subItem]);
 
   const closeTopicListModal: any = (e: {
     target: { dataset: { close: string } };
   }) => {
     if (e.target.dataset.close) {
       setDisplay(false);
-      dispatchFn(libraryAction.hideLibrary(false))
+      dispatchFn(libraryAction.hideLibrary(false));
     }
   };
 
   return (
     <div
       className={`h-[calc(100vh-8rem)] sm:h-[calc(100vh-7rem)] left-[8rem] sm:left-[7rem] text-[1.8rem] z-50 top-[8rem] w-[calc(100vw-8rem)] sm:w-[calc(100vw-7rem)] sm:top-0 absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear  ${
-        display ? "opacity-100 visible" : "opacity-0 invisible sm:visible sm:opacity-100"
+        display
+          ? "opacity-100 visible"
+          : "opacity-0 invisible sm:visible sm:opacity-100"
       }`}
       data-close={"close-modal"}
       onClick={closeTopicListModal}
@@ -70,13 +74,13 @@ const TopicListModal = ({
                   router.push(`/library/${item.route}`);
                   dispatchFn(libraryAction.setSubItem(item.route));
                   dispatchFn(libraryAction.setNavIndex(topic.number));
-                  dispatchFn(libraryAction.hideLibrary(false))
+                  dispatchFn(libraryAction.hideLibrary(false));
                   setDisplay(false);
                 }}
               >
                 {item.title}
               </li>
-            )
+            ),
           )}
         </ul>
       </div>
