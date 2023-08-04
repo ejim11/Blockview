@@ -5,7 +5,8 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
 import LibraryNavBar from "./LibraryNavBar";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import React from "react";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [displayNav, setDisplayNav] = useState<boolean>(false);
@@ -18,22 +19,26 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   const routePath: string = useRouter().pathname;
 
-  const toggleNavDisplay = ():void => {
-    setDisplayNav((prevState:boolean) => !prevState);
+  const toggleNavDisplay = (): void => {
+    setDisplayNav((prevState: boolean) => !prevState);
   };
 
   return (
     <div className="sm:relative w-screen ">
       <header className="flex items-center h-[8rem] sm:h-[7rem] px-[3rem] sm:px-[2rem] fixed top-0 left-0 w-full bg-color-white border-b border-color-border z-50">
         <Link href={"/home"} className="flex items-center">
-          <motion.div initial={{rotate: 360}} animate={ {rotate: 0}} transition = {{duration: 1}}>
+          <motion.div
+            initial={{ rotate: 360 }}
+            animate={{ rotate: 0 }}
+            transition={{ duration: 1 }}
+          >
             <FaUncharted className="text-color-dark-blue mr-2 w-[2.5rem] h-[2.5rem]" />
           </motion.div>
-        <p className=" text-[2.5rem] font-bold tracking-wide logo-animation text-[#06283D]">
-          BLOCKVIEW
-        </p>
+          <p className=" text-[2.5rem] font-bold tracking-wide logo-animation text-[#06283D]">
+            BLOCKVIEW
+          </p>
         </Link>
-        
+
         {!displayNav && (
           <RiMenu3Fill
             className="hidden sm:block ml-auto w-[2.5rem] h-[2.5rem]"
