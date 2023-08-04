@@ -1,16 +1,14 @@
 import { useEffect } from "react";
-import { useRouter } from "next/router";
-
+import { NextRouter, useRouter } from "next/router";
 
 const HomeLoader = () => {
-  const router = useRouter();
+  const router: NextRouter = useRouter();
 
-  useEffect(() => {
+  useEffect((): void => {
     router.push("/home");
   });
 
-  return <>
-  </>;
+  return <></>;
 };
 
 export default HomeLoader;

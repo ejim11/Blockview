@@ -2,7 +2,7 @@ import { toast } from "react-toastify";
 import { BsFillPatchExclamationFill } from "react-icons/bs";
 import { BsPatchCheckFill } from "react-icons/bs";
 
-export const toastError = (msg: string) => {
+export const toastError = (msg: string): void => {
   toast.error(msg, {
     hideProgressBar: true,
     autoClose: 2000,
@@ -12,10 +12,12 @@ export const toastError = (msg: string) => {
   });
 };
 
-export const toastSuccess = (msg: string) => {
+export const toastSuccess = (msg: string): void => {
   toast.success(msg, {
     hideProgressBar: true,
     autoClose: 2000,
-    icon: <BsPatchCheckFill className="text-color-dark-blue w-[2rem] h-[2rem] " />,
+    icon: (
+      <BsPatchCheckFill className="text-color-dark-blue w-[2rem] h-[2rem] " />
+    ),
   });
 };
