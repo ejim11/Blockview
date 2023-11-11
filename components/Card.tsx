@@ -15,7 +15,7 @@ const Card: React.FC<{
   next?: PageNavButtons;
   title?: string;
   bgImg?: string;
-}> = ({ children, prev, next, title, bgImg }) => {
+}> = ({ children, prev, next, title }) => {
   const dispatch = useAppDispatch();
 
   const containerRef: MutableRefObject<null> = useRef(null);
