@@ -37,7 +37,7 @@ const Card: React.FC<{
       />
       <div
         className={`w-full h-[22rem]  py-[1.5rem]  text-color-white text-[4rem] flex sm:flex-col sm:items-start items-center px-[2rem]   bg-no-repeat bg-cover bg-center ${
-          bgImg ? bgImg : "bg-color-border"
+          bgImg ? "bg-card-header" : "bg-color-border"
         }`}
       >
         <motion.div
