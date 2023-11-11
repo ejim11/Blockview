@@ -39,7 +39,11 @@ const Card: React.FC<{
       <div
         className={`w-full h-[22rem]  py-[1.5rem]  text-color-white text-[4rem] flex sm:flex-col sm:items-start items-center px-[2rem]   `}
         style={{
-          backgroundImage: `linear-gradient(#06283D, #1365df74), url(${bgImg})`,
+          backgroundImage: `${
+            bgImg
+              ? "linear-gradient(#06283D, #1365df74), url(${bgImg})"
+              : "linear-gradient(#06283D, #1365df74), url()"
+          }`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
