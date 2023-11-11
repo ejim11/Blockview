@@ -37,9 +37,7 @@ const Card: React.FC<{
         className="fixed h-[1rem] top-[8rem] sm:top-[7rem] left-[8rem] sm:left-0 right-0 origin-left w-full bg-color-light-blue z-20"
       />
       <div
-        className={`w-full h-[22rem]  py-[1.5rem]  text-color-white text-[4rem] flex sm:flex-col sm:items-start items-center px-[2rem]   bg-no-repeat bg-cover bg-center ${
-          true ? "bg-card-header" : "bg-color-border"
-        }`}
+        className={`w-full h-[22rem]  py-[1.5rem]  text-color-white text-[4rem] flex sm:flex-col sm:items-start items-center px-[2rem]   `}
         style={{
           backgroundImage: `linear-gradient(#06283D, #1365df74), url(${bgImg})`,
           backgroundRepeat: "no-repeat",

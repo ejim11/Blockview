@@ -44,7 +44,7 @@ const ResourceLibrary = () => {
   ));
 
   return (
-    <Card title="Welcome" bgImg={bgImg}>
+    <Card title="Welcome" bgImg={bgImg.src}>
       <p className="my-2  ">
         Web 3 and blockchain stand as two transformative technologies in the
         21st century, reshaping business, communication, and information access.
