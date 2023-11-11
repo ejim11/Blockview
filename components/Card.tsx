@@ -4,6 +4,7 @@ import { MutableRefObject, useRef } from "react";
 import { RiBook3Line } from "react-icons/ri";
 import { useAppDispatch } from "../hooks/customHooks";
 import { libraryAction } from "../slices/librarySlice";
+import { StaticImageData } from "next/image";
 
 interface PageNavButtons {
   path: string;
@@ -14,8 +15,8 @@ const Card: React.FC<{
   prev?: PageNavButtons;
   next?: PageNavButtons;
   title?: string;
-  bgImg?: string;
-}> = ({ children, prev, next, title }) => {
+  bgImg?: string | StaticImageData;
+}> = ({ children, prev, next, title, bgImg }) => {
   const dispatch = useAppDispatch();
 
   const containerRef: MutableRefObject<null> = useRef(null);
@@ -39,6 +40,13 @@ const Card: React.FC<{
         className={`w-full h-[22rem]  py-[1.5rem]  text-color-white text-[4rem] flex sm:flex-col sm:items-start items-center px-[2rem]   bg-no-repeat bg-cover bg-center ${
           true ? "bg-card-header" : "bg-color-border"
         }`}
+        style={{
+          backgroundImage: `linear-gradient(#06283D, #1365df74), url(${bgImg})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
       >
         <motion.div
           className={

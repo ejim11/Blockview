@@ -1,9 +1,11 @@
+/* eslint-disable prettier/prettier */
 import topics from "../../components/utils/topics";
 import Link from "next/link";
 import { libraryAction } from "../../slices/librarySlice";
 import Card from "../../components/Card";
 import { useAppDispatch } from "../../hooks/customHooks";
 import { Topic } from "../../components/utils/types";
+import bgImg from "../../public/assets/blockchainHome.jpeg";
 
 const ResourceLibrary = () => {
   const dispatchFn = useAppDispatch();
@@ -17,7 +19,7 @@ const ResourceLibrary = () => {
         {topic.subTitles.map(
           (
             subTitle: { title: string; route: string } | undefined,
-            i: number,
+            i: number
           ) => (
             <li
               key={i}
@@ -35,14 +37,14 @@ const ResourceLibrary = () => {
                 {subTitle?.title}
               </Link>
             </li>
-          ),
+          )
         )}
       </ul>
     </li>
   ));
 
   return (
-    <Card title="Welcome" bgImg={"bg-card-header"}>
+    <Card title="Welcome" bgImg={bgImg}>
       <p className="my-2  ">
         Web 3 and blockchain stand as two transformative technologies in the
         21st century, reshaping business, communication, and information access.
