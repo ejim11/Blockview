@@ -19,11 +19,7 @@ const TopicListModal = ({
 
   const subItem: string = useAppSelector((state) => state.library.subItem);
 
-  console.log(subItem);
-
   const topicPath: string = router.asPath.slice(9);
-
-  console.log(topicPath);
 
   const topic: any = topics.find(
     (topic: any) => topic.number === Number(index),
@@ -60,7 +56,7 @@ const TopicListModal = ({
         onClick={closeTopicListModal}
       >
         <div className="w-full border-b border-color-border">
-          <p className="w-[80%]  font-semibold text-[2.5rem] sm:text-[2.3rem] px-[2rem] py-[1.5rem]   text-color-dark-blue">
+          <p className="w-[80%]  font-semibold text-[2.5rem] sm:text-[1.85rem] px-[2rem] py-[1.5rem]   text-color-dark-blue">
             {topic?.title}
           </p>
         </div>
