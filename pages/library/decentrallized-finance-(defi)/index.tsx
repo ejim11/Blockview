@@ -2,6 +2,7 @@
 import React from "react";
 import Card from "../../../components/Card";
 import { Path } from "../../../components/utils/types";
+import FadeInText from "../../../components/FadeInText";
 
 const Defi = () => {
   const prev: Path = {
@@ -13,28 +14,28 @@ const Defi = () => {
   };
 
   return (
-    <Card prev={prev} next={next}>
-      <h3 className="mb-[2rem] font-semibold text-[2.5rem]">
-        Decentralized Finance (DEFI)
-      </h3>
-      <p>
-        Cryptographic tokens represent a new heterogenous asset class that can
-        fulfill a diverse range of economic functions. Their frictionless
-        issuance and settlement process could potentially convert many assets or
-        access rights of the real world into "bankable funds." Tokenizing
-        economic activities, from real assets to digital assets and all types of
-        access rights, could impact the role of central bank money as a
-        geographical monopolist providing a medium of exchange, once mass
-        adoption of the Web3 manifests and necessary network effects kick in.
-        The speed at which these tokens are being issued is an indicator that a
-        new tokenized economic system is emerging. Such tokenization of the real
-        economy could gradually lead to the merging of the money system, with
-        the financial system and the real economy. A range of easy-to-use
-        decentralized financial (DeFi) applications have been emerging beyond
-        simple payments that facilitate frictional and P2P asset
-        issuance,trading, lending and hedging to Gaaming, Nfts and so much more.
-      </p>
-      <p className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">
+    <Card
+      prev={prev}
+      next={next}
+      title="Decentralized Finance (DEFI)"
+      bgImg={"bg-card-header"}
+    >
+      <FadeInText>
+        Cryptographic tokens are a new type of asset that can do many different
+        economic jobs. They can be created and traded easily, potentially
+        turning many real-world assets or rights into "bankable funds." Turning
+        real assets, digital assets, and access rights into tokens could change
+        the role of central bank money, which now acts as a major way to
+        exchange value in specific areas. As more people start using Web3 and
+        its benefits grow, this change could happen faster. The rapid creation
+        of these tokens shows that a new economic system is forming. This new
+        system could blend the money system, financial system, and real economy
+        together. Many new decentralized financial (DeFi) applications are
+        appearing that do more than just simple payments. They allow people to
+        issue, trade, lend, and protect assets easily, and also include things
+        like gaming and NFTs.
+      </FadeInText>
+      <FadeInText className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">
         The term "DeFi encompasses any decentralized and permissionless
         financial application that builds on top of the blockchain, including
         privacy-preserving payment systems (privacy tokens), stability
@@ -44,21 +45,19 @@ const Defi = () => {
         derivatives. These Web3-based DeFi applications open traditional
         financial services to the general public, mitigating current
         inefficiencies of financial markets.
-      </p>
-      <p>
-        The current financial system, even in it's electronic form, requires a
-        range of intermediary services for mitigating counterparty risk, market
-        making and in securing funds from being stolen. This is a result of the
-        server-centric nature of the current Internet. In a tokenized economy,
-        however, blockchain solutions increase ecosystem transparency,
-        accountability, and market efficiency: Due to the public nature of the
-        blockchain, DeFi applications are designed to be globally accessible by
-        anyone around the world with an Internet connection and a Web3 wallet.
-        Once the smart contract is deployed, DeFi applications self-execute with
-        little institutional intervention except for code upgrades, bug fixes,
-        and dispute resolution.
-      </p>
-      <p className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">
+      </FadeInText>
+      <FadeInText>
+        The current financial system, even when using electronic methods, needs
+        many middlemen to reduce risks, make markets, and keep money safe. This
+        is because of the way our Internet is set up, relying on central
+        servers. In a tokenized economy, blockchain solutions make things
+        clearer, more accountable, and more efficient. Because blockchains are
+        public, DeFi (decentralized finance) applications can be used by anyone
+        with an Internet connection and a Web3 wallet. Once set up, these DeFi
+        apps run on their own with very little need for middlemen, except for
+        updates, fixing bugs, and solving disputes.
+      </FadeInText>
+      <FadeInText className="bg-[#f1f3f5] p-[2rem] rounded-lg my-[2rem] border-l-4 border-color-light-blue">
         A smart contract is a set of promises, specified in digital form,
         including protocols within which the parties perform on these promises.
         A smart contract, just like a vending machine, has logic programmed
@@ -67,19 +66,18 @@ const Defi = () => {
         logic, then the program fails. Just like if you choose not to deposit
         money in a vending machine, it will simply not dispense a drink to you.
         Same with a smart contract! But smart contracts are cooler!
-      </p>
-      <p className="my-[1rem]">
-        If users choose wallet solutions, they remain in possession of the
-        private keys and in full control of the funds, potentially
-        disintermediating many financial services that currently provide
-        services to mitigate counterparty risk, act as market makers, or secure
-        funds from being stolen. Any smart contract code can be audited by
-        anyone and is subject to collective loophole fixing, which is the basis
-        for the rapidly evolving DeFi ecosystem. All token transactions are
-        publicly verifiable, reducing market friction and increasing the
-        interoperability of financial services.
-      </p>
-      <p>
+      </FadeInText>
+      <FadeInText className="my-[1rem]">
+        If users choose wallet solutions, they keep their private keys and have
+        full control of their funds. This could remove the need for many
+        financial services that currently reduce risks, help make markets, or
+        protect funds from theft. Anyone can check and fix smart contract code,
+        which helps the DeFi (decentralized finance) system grow quickly. All
+        token transactions are public and can be verified by anyone, making
+        financial services work together better and reducing problems in the
+        market.
+      </FadeInText>
+      <FadeInText>
         Combining various DeFi solutions, such as "stable tokens,"
         "decentralized exchanges," and "decentralized lending," produce
         completely new products available to retail investors and the general
@@ -89,7 +87,7 @@ const Defi = () => {
         dynamics of our economic system and contribute to the merging of the
         real economy and the financial system, making their distinction
         increasingly impossible.
-      </p>
+      </FadeInText>
     </Card>
   );
 };

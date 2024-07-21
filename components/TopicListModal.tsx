@@ -19,7 +19,11 @@ const TopicListModal = ({
 
   const subItem: string = useAppSelector((state) => state.library.subItem);
 
+  console.log(subItem);
+
   const topicPath: string = router.asPath.slice(9);
+
+  console.log(topicPath);
 
   const topic: any = topics.find(
     (topic: any) => topic.number === Number(index),
@@ -42,7 +46,7 @@ const TopicListModal = ({
 
   return (
     <div
-      className={`h-[calc(100vh-8rem)] sm:h-[calc(100vh-7rem)] left-[8rem] sm:left-[7rem] text-[1.8rem] z-50 top-[8rem] w-[calc(100vw-8rem)] sm:w-[calc(100vw-7rem)] sm:top-0 absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear  ${
+      className={`h-[calc(100vh-7rem)] sm:h-[calc(100vh-7rem)] left-[8rem] sm:left-[7rem] text-[1.8rem] z-50 top-[7rem] w-[calc(100vw-8rem)] sm:w-[calc(100vw-7rem)] sm:top-0 absolute bg-color-bg-transparent cursor-pointer transition-all duration-150 ease-linear  ${
         display
           ? "opacity-100 visible"
           : "opacity-0 invisible sm:visible sm:opacity-100"
@@ -66,7 +70,7 @@ const TopicListModal = ({
               <li
                 key={i}
                 className={`border-b border-color-border px-[2rem] py-[1.5rem] font-medium hover:text-color-light-blue cursor-pointer  ${
-                  topicPath === item.route || subItem === item.route
+                  topicPath === item.route
                     ? "text-color-light-blue"
                     : "text-color-dark-blue-2"
                 }`}

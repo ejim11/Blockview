@@ -16,6 +16,7 @@ html {
   box-sizing: border-box;
   font-size: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth !important;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -43,7 +44,6 @@ input {
   font-size: 16px !important;
 }
 
-
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -65,7 +65,7 @@ input {
   font-size: 1.7rem;
 }
 
-.home-page-clip{
+.home-page-clip {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 
@@ -75,8 +75,12 @@ input {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0 }
-  to { opacity: 1 }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*animation for text*/
@@ -104,7 +108,25 @@ input {
   }
 }
 
-.logo-animation{
+.logo-animation {
   animation: titleAnimation 3s ease-in;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0f0c1f3a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(39, 46, 51);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

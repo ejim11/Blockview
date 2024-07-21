@@ -1,49 +1,60 @@
+/* eslint-disable react/no-unescaped-entities */
 import Card from "../../../components/Card";
 import Image from "next/image";
 import webHistory from "../../../public/assets/historyofweb.png";
 import centralizedImg from "../../../public/assets/centralized.png";
 import decentralizedImg from "../../../public/assets/decentralized.png";
 import { Path } from "../../../components/utils/types";
+import FadeInText from "../../../components/FadeInText";
+import { useEffect } from "react";
 
 const Web2AndWeb3 = () => {
   const next: Path = {
     path: "cryptography",
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
-    <Card next={next} prev={undefined}>
-      <h3 className="mb-[2rem] font-semibold text-[2.5rem]">
+    <Card
+      next={next}
+      prev={undefined}
+      title="The Web3 Revolution"
+      bgImg={"bg-card-header"}
+    >
+      {/* <h3 className="mb-[2rem] font-semibold text-[2.5rem]">
         The Web3 Revolution
-      </h3>
-      <p>
-        The WWW (World Wide Web) revolutionized information, and the Web2
-        transformed interactions, the Web3 has the potential to revolutionize
-        agreements and value exchange. The Web3 changes the data structures in
-        the backend of the Internet, introducing a universal state ledger where
-        all transactions are stored and protected by incentivizing network
-        actors with network tokens to validate and verify transactions in the
-        network. The backbone of the Web3 is represented by a series of
-        blockchain networks or similar distributed ledgers.
-      </p>
+      </h3> */}
+      <FadeInText>
+        The World Wide Web changed how we access information, and Web2 changed
+        how we interact online. Now, Web3 could revolutionize how agreements and
+        value are exchanged. Web3 updates how data is stored behind the scenes
+        on the Internet. It introduces a universal ledger where every
+        transaction is recorded securely. This ledger uses network tokens to
+        reward those who verify transactions, ensuring everything is accurate
+        and trustworthy. The foundation of Web3 is built on blockchain networks
+        or similar systems that spread out information across many computers.
+      </FadeInText>
       <Image
         src={webHistory}
         alt="web history"
         className="w-[70%] md:w-[80%] sm:w-[95%] my-[4rem] mx-auto"
       />
-      <p>
-        The Internet we have today is broken. We do not control our data, nor do
-        we have a native value settlement layer. Our data architectures are
-        still based on the concept of the stand-alone computer, where data is
-        centrally stored and managed on a server, and sent or retrieved by a
-        client. Every time we interact over the Internet, copies of our data get
-        sent to the server of a service provider, and every time that happens,
-        we lose control over our data. This raises issues of trust. Can I trust
-        those people and institutions that store and manage my data against any
-        form of corruption internally or externally, on purpose or by accident?
-        Centralized data structures not only raise issues of security, privacy
-        and control of personal data, but also produce many inefficiencies along
-        the supply chain of goods and services.
-      </p>
+      <FadeInText>
+        The Internet we use today has some big problems. We don't have control
+        over our data, and there's no built-in system for transferring value.
+        Our current data systems are based on old concepts where data is stored
+        on a central server and accessed by a client. Whenever we use the
+        Internet, copies of our data are sent to the service provider's server,
+        which means we lose control over it. This situation creates trust
+        issues. Can we trust the people and organizations managing our data to
+        protect it from corruption, whether intentional or accidental?
+        Centralized data storage leads to concerns about security, privacy, and
+        control of personal data. It also causes inefficiencies in the supply
+        chain of goods and services.
+      </FadeInText>
       <Image
         src={centralizedImg}
         alt="web history"
@@ -52,30 +63,23 @@ const Web2AndWeb3 = () => {
       <p className="text-[2rem] text-center font-semibold mt-[2rem] mb-[4rem]">
         Data Monopoly (Single Point Of Failure)
       </p>
-      <p className="my-[2rem]">
-        The emergence of the WWW in the early 1990s increased the usability of
-        the Internet with visually appealing and easy-to-navigate websites,
-        years later, the Internet became more mature, and programmable. We saw
-        the rise of the so-called Web2, which brought us social media,
-        e-commerce and knowledge platforms. The Web2 revolutionized social
-        interactions, bringing producers and consumers of formation, goods, and
-        services closer together. The Web2 allowed us to enjoy peer-to-peer
-        (P2P) interactions on a global scale, but always with a middleman: a
-        platform acting as a trusted intermediary between two people who do not
-        know or trust each other. While these Internet platforms have done a
-        fantastic job of creating a P2P economy, they also dictate all the rules
-        and they control the data of their users.
-      </p>
-      <p>
-        In this context, blockchain networks seem to be a driving force of the
-        next-generation Internet, what some refer to is the Web3. They reinvent
-        the way that data is stored and managed over the Internet, providing a
-        unique universal state layer that is collectively managed by all
-        nodes(computers) in the network. This unique state layer, for the first
-        time, provides a native value settlement layer for the Internet in the
-        absence of intermediaries. It enables true P2P transactions, and it all
-        started with tie emergence of Bitcoin.
-      </p>
+      <FadeInText className="my-[2rem]">
+        In the early 1990s, the World Wide Web made the Internet easier to use
+        with attractive and easy-to-navigate websites. Over time, the Internet
+        grew and became more advanced. This led to the rise of Web2, which
+        introduced social media, online shopping, and knowledge-sharing
+        platforms. Web2 changed how we interact online, bringing people closer
+        together for sharing information, buying, and selling goods and
+        services. However, these interactions always required a middleman, like
+        a platform, to facilitate and control the exchanges. Now, blockchain
+        networks are driving the next version of the Internet, called Web3. Web3
+        changes how data is stored and managed, creating a universal layer that
+        all network computers manage together. This new layer allows for direct
+        transactions between people without intermediaries, enabling true
+        peer-to-peer (P2P) interactions. It all began with the creation of
+        Bitcoin.
+      </FadeInText>
+
       <Image
         src={decentralizedImg}
         alt="web history"
@@ -84,19 +88,19 @@ const Web2AndWeb3 = () => {
       <p className="text-[2rem] text-center font-semibold mt-[2rem] mb-[4rem]">
         Data Sovereignity (No Single Point Of Failure)
       </p>
-      <p>
-        Data is collaboratively managed by a P2P network of computers The
-        management rules are formalized in the protocol and secured by majority
-        consensus of all network participants, who are incentivized with a
-        network token for their activities. The protocol formalizes the
-        governance rules of the network and ensures that people who do not know
-        or trust each other reach and settle agreements over the Web. While
-        trying to manipulate data on a server resembles treaking into a house,
-        where security is provided by a fence and an alarm system, the Web3 is
-        designed in a way that you would need to break into multiple houses
-        around the globe simultaneously, which each have their own fence and
-        alarm system. This is possible but prohibitively expensive.
-      </p>
+      <FadeInText>
+        In Web3, lots of computers work together to take care of data. They
+        follow special rules called a protocol, and everyone agrees on these
+        rules to keep things safe. The people running these computers get
+        tokens, like little rewards, for their help. These rules make sure that
+        even if people don't know or trust each other, they can still make deals
+        online. The universal layer that enables this is so secure, Imagine
+        trying to sneak into one house with a fence and an alarm. That's like
+        messing with data on a regular server. But Web3 is like having to sneak
+        into many houses all over the world at the same time, each with its own
+        fence and alarm. It's so hard and expensive that it's almost impossible
+        to do.
+      </FadeInText>
     </Card>
   );
 };

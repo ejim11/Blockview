@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion, useScroll } from "framer-motion";
-import { MutableRefObject, useRef } from "react";
+import { MutableRefObject, useEffect, useRef } from "react";
 import { RiBook3Line } from "react-icons/ri";
 import { useAppDispatch } from "../hooks/customHooks";
 import { libraryAction } from "../slices/librarySlice";
@@ -26,17 +26,21 @@ const Card: React.FC<{
     dispatch(libraryAction.displayLibrary(true));
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <section
-      className=" w-[calc(100vw-8rem)]  sm:w-full relative mt-[8rem] sm:mt-[7rem] h-[calc(100vh-8rem)] sm:h-[calc(100vh-7rem)] overflow-y-scroll  "
+      className=" w-[calc(100vw-8rem)]  sm:w-full relative mt-[7rem] sm:mt-[7rem] h-[calc(100vh-7rem)] sm:h-[calc(100vh-7rem)] overflow-y-scroll  "
       ref={containerRef}
     >
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="fixed h-[1rem] top-[8rem] sm:top-[7rem] left-[8rem] sm:left-0 right-0 origin-left w-full bg-color-light-blue z-20"
+        className="fixed h-[1rem] top-[7rem] sm:top-[7rem] left-[8rem] sm:left-0 right-0 origin-left w-full bg-color-light-blue z-20"
       />
       <div
-        className={`w-full h-[22rem]  py-[1.5rem]  text-color-white text-[4rem] flex sm:flex-col sm:items-start items-center px-[2rem]   bg-no-repeat bg-cover bg-center ${
+        className={`w-full h-[22rem]  py-[1.5rem]   flex sm:flex-col sm:items-start items-center px-[2rem]   bg-no-repeat bg-cover bg-center ${
           bgImg ? bgImg : "bg-color-border"
         }`}
       >
@@ -48,7 +52,13 @@ const Card: React.FC<{
         >
           <RiBook3Line className={"w-[2.5rem] h-[2.5rem]"} />
         </motion.div>
-        <p className={"logo-animation "}>{title}</p>
+        <p
+          className={
+            "logo-animation text-color-white text-[4rem] sm:text-[3rem]"
+          }
+        >
+          {title}
+        </p>
       </div>
       <div className=" w-full text-[1.7rem] bg-color-white  p-[3rem] sm:border-0 sm:p-[2rem]">
         {children}
@@ -71,6 +81,11 @@ const Card: React.FC<{
           </Link>
         )}
       </div>
+      <footer className="px-[3rem] mt-auto">
+        <p className="border-t border-color-dark-blue w-full py-[2rem] text-[1.4rem] text-center">
+          Blockview © copyright 2024
+        </p>
+      </footer>
     </section>
   );
 };

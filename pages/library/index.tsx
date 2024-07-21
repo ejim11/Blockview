@@ -43,9 +43,11 @@ const ResourceLibrary = () => {
 
   return (
     <Card title="Welcome" bgImg={"bg-card-header"}>
-      <p className="my-2  ">
+      <p className="my-[1rem] ">
         Web 3 and blockchain stand as two transformative technologies in the
         21st century, reshaping business, communication, and information access.
+      </p>
+      <p className="my-[1rem]">
         Web 3 represents the future of the internet, promising enhanced
         security, convenience, and efficiency in accessing services and
         products.
@@ -58,7 +60,7 @@ const ResourceLibrary = () => {
         markets, generate opportunities, and establish a more just and secure
         digital realm.
       </p>
-      <p className="my-2 ">
+      <p className="my-[1rem]">
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         Let's delve into an in-depth exploration of blockchain, spotlighting its
         role in establishing a secure and transparent transaction network.

@@ -6,7 +6,8 @@ type TransactionData = {
 export const transactionData: TransactionData[] = [
   {
     title: "nonce",
-    description: "index, gets incremented every time transaction gets mined",
+    description:
+      "The nonce is a special number that makes each transaction unique. It is only used once and helps prevent the same transaction from being sent again by accident or on purpose. In some blockchains like Ethereum, the nonce also helps keep track of the order of transactions for each user.",
   },
   {
     title: "from",

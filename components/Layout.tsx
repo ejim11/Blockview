@@ -25,7 +25,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="sm:relative w-screen ">
-      <header className="flex items-center h-[8rem] sm:h-[7rem] px-[3rem] sm:px-[2rem] fixed top-0 left-0 w-full bg-color-white border-b border-color-border z-50">
+      <header className="flex items-center h-[7rem] sm:h-[7rem] px-[3rem] sm:px-[2rem] fixed top-0 left-0 w-full bg-color-white border-b border-color-border z-50">
         <Link href={"/home"} className="flex items-center">
           <motion.div
             initial={{ rotate: 360 }}
