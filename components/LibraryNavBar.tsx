@@ -32,7 +32,7 @@ const LibraryNavBar = () => {
 
   const { height }: { height: number } = useDimensions(containerRef);
 
-  const [topicIndex, setTopicIndex] = useState<undefined | number>();
+  const [topicIndex, setTopicIndex] = useState<undefined | number>(1);
   const [displayModal, setDisplaymodal] = useState<boolean>(false);
 
   const sidebar = {
