@@ -4,6 +4,7 @@ import { MutableRefObject, useEffect, useRef } from "react";
 import { RiBook3Line } from "react-icons/ri";
 import { useAppDispatch } from "../hooks/customHooks";
 import { libraryAction } from "../slices/librarySlice";
+import libImg from "../public/assets/blockchainHome.jpeg";
 
 interface PageNavButtons {
   path: string;
@@ -15,7 +16,7 @@ const Card: React.FC<{
   next?: PageNavButtons;
   title?: string;
   bgImg?: string;
-}> = ({ children, prev, next, title, bgImg }) => {
+}> = ({ children, prev, next, title }) => {
   const dispatch = useAppDispatch();
 
   const containerRef: MutableRefObject<null> = useRef(null);
@@ -40,9 +41,14 @@ const Card: React.FC<{
         className="fixed h-[1rem] top-[7rem] sm:top-[7rem] left-[8rem] sm:left-0 right-0 origin-left w-full bg-color-light-blue z-20"
       />
       <div
-        className={`w-full h-[22rem]  py-[1.5rem]   flex sm:flex-col sm:items-start items-center px-[2rem]   bg-no-repeat bg-cover bg-center ${
-          bgImg ? bgImg : "bg-color-border"
-        }`}
+        style={{
+          backgroundImage: `url(${libImg.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+        className={`w-full h-[22rem]  py-[1.5rem]   flex sm:flex-col sm:items-start items-center px-[2rem]  `}
       >
         <motion.div
           className={
